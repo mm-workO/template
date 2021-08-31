@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Component｜CSSParts</title>
+    <meta
+      name="description"
+      content="HTMLコーディングを効率化するテンプレート"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/lib/highlight/tomorrow-night-eighties.css"
+    />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link
+      rel="icon"
+      href="https://haniwaman.com/template/src/img/common/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <header class="p-header l-header">
+      <div class="l-inner">
+        <div class="l-row l-row--middle">
+          <div class="e-logo u-mr-auto">
+            <a href="../index.html">CSSParts</a>
+          </div>
+          <!-- /e-logo -->
+          <nav class="e-nav">
+            <ul class="c-navigation">
+              <li><a href="../layout/index.html">Layout</a></li>
+              <li><a href="index.html">Component</a></li>
+              <li><a href="../utility/index.html">Utility</a></li>
+              <li><a href="../javascript/index.html">JavaScript</a></li>
+            </ul>
+          </nav>
+          <!-- /e-nav -->
+          <nav class="e-drawer">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer-header"
+                data-target="for-drawer-header"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div class="c-drawer__close js-drawer for-drawer-header"></div>
+              <div class="c-drawer__content for-drawer-header">
+                <ul class="c-list">
+                  <li><a href="../foundation/index.html">Foundation</a></li>
+                  <li><a href="../layout/index.html">Layout</a></li>
+                  <li><a href="index.html">Component</a></li>
+                  <li><a href="../project/index.html">Project</a></li>
+                  <li><a href="../utility/index.html">Utility</a></li>
+                  <li><a href="../setting/index.html">Setting</a></li>
+                  <li><a href="../external/index.html">External</a></li>
+                  <li><a href="../javascript/index.html">JavaScript</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- /e-drawer -->
+        </div>
+        <!-- /l-row -->
+      </div>
+      <!-- /l-inner -->
+    </header>
+    <!-- /l-header -->
+
+    <div class="c-mainvisual">
+      <div class="c-mainvisual__content">
+        <div class="c-mainvisual__title">Component</div>
+        <div class="c-mainvisual__lead">
+          再利用ができる最小限のパーツ。21種類100パターンのパーツを用意しました。
+        </div>
+      </div>
+    </div>
+
+    <nav class="p-toc">
+      <div class="c-drawer c-drawer--left">
+        <div class="e-title js-drawer c-button">目次</div>
+        <div class="c-drawer__close js-drawer"></div>
+        <div class="c-drawer__content e-content js-drawer-close">
+          <ul class="c-list">
+            <li><a href="index.html#a-c-background">.c-background</a></li>
+            <li><a href="index.html#a-c-box">.c-box</a></li>
+            <li><a href="index.html#a-c-breadcrumb">.c-breadcrumb</a></li>
+            <li><a href="index.html#a-c-button">.c-button</a></li>
+            <li><a href="index.html#a-c-drawer">.c-drawer</a></li>
+            <li><a href="index.html#a-c-file">.c-file</a></li>
+            <li><a href="index.html#a-c-heading">.c-heading</a></li>
+            <li><a href="index.html#a-c-icon">.c-icon</a></li>
+            <li><a href="index.html#a-c-list">.c-list</a></li>
+            <li><a href="index.html#a-c-mainvisual">.c-mainvisual</a></li>
+            <li><a href="index.html#a-c-marker">.c-marker</a></li>
+            <li><a href="index.html#a-c-modal">.c-modal</a></li>
+            <li><a href="index.html#a-c-navigation">.c-navigation</a></li>
+            <li><a href="index.html#a-c-radio">.c-radio</a></li>
+            <li><a href="index.html#a-c-section-head">.c-section-head</a></li>
+            <li><a href="index.html#a-c-select">.c-select</a></li>
+            <li><a href="index.html#a-c-tab">.c-tab</a></li>
+            <li><a href="index.html#a-c-table">.c-table</a></li>
+            <li><a href="index.html#a-c-text">.c-text</a></li>
+            <li><a href="index.html#a-c-textarea">.c-textarea</a></li>
+            <li><a href="index.html#a-c-accordion">.c-accordion</a></li>
+            <li><a href="index.html#a-c-grid">.c-grid</a></li>
+            <li><a href="index.html#a-c-grid">.c-loading</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="p-main">
+      <div class="l-inner">
+        <section class="p-component">
+          <h2 id="a-c-background" class="e-title-block">.c-background</h2>
+          <p class="e-introduction">
+            背景画像です。高さは標準で300pxを設定しています。
+          </p>
+
+          <div class="p-preview e-preview u-px-0">
+            <div class="c-background"></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-background&quot;&gt;&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-background--mask</h3>
+          <p class="e-introduction">透過した黒色で覆われた背景画像です。</p>
+
+          <div class="p-preview e-preview u-px-0">
+            <div class="c-background c-background--mask"></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-background c-background--mask&quot;&gt;&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-background--fixed</h3>
+          <p class="e-introduction">
+            スクロールに連動せずに固定される背景画像です。
+          </p>
+
+          <div class="p-preview e-preview u-px-0">
+            <div class="c-background c-background--fixed"></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-background c-background--fixed&quot;&gt;&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-background--window-full</h3>
+          <p class="e-introduction">
+            コンテナからはみ出した幅いっぱい背景画像です。
+          </p>
+
+          <div class="p-preview e-preview u-px-0">
+            <div class="c-background c-background--window-full"></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-background c-background--window-full&quot;&gt;&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-background--window-right</h3>
+          <p class="e-introduction">
+            コンテナからはみ出した右寄せの背景画像です。
+          </p>
+
+          <div class="p-preview e-preview u-px-0">
+            <div class="c-background c-background--window-right"></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-background c-background--window-right&quot;&gt;&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-background--window-left</h3>
+          <p class="e-introduction">
+            コンテナからはみ出した左寄せの背景画像です。
+          </p>
+
+          <div class="p-preview e-preview u-px-0">
+            <div class="c-background c-background--window-left"></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-background c-background--window-left&quot;&gt;&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-box" class="e-title-block">.c-box</h2>
+          <p class="e-introduction">線で囲ったシンプルなボックスです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-box">
+              <p>
+                ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。
+              </p>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-box&quot;&gt;
+	&lt;p&gt;ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-box__title</h3>
+          <p class="e-introduction">タイトル付きのボックスです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-box">
+              <div class="c-box__title">ボックスの見出し</div>
+              <p>
+                ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。
+              </p>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-box&quot;&gt;
+	&lt;div class=&quot;c-box__title&quot;&gt;ボックスの見出し&lt;/div&gt;
+	&lt;p&gt;ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-box--balloo-right</h3>
+          <p class="e-introduction">右向きの吹き出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-box c-box--balloo-right">
+              <p>
+                ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。
+              </p>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-box c-box--balloo-right&quot;&gt;
+	&lt;p&gt;ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-box--balloo-top</h3>
+          <p class="e-introduction">上向きの吹き出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-box c-box--balloo-top">
+              <p>
+                ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。
+              </p>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-box c-box--balloo-top&quot;&gt;
+	&lt;p&gt;ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-box--balloo-bottom</h3>
+          <p class="e-introduction">下向きの吹き出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-box c-box--balloo-bottom">
+              <p>
+                ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。
+              </p>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-box c-box--balloo-bottom&quot;&gt;
+	&lt;p&gt;ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-box--balloo-left</h3>
+          <p class="e-introduction">左向きの吹き出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-box c-box--balloo-left">
+              <p>
+                ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。
+              </p>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-box c-box--balloo-left&quot;&gt;
+	&lt;p&gt;ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-box--type1</h3>
+          <p class="e-introduction">見出しがボーダーに被るボックスです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-box c-box--type1">
+              <div class="c-box__title c-box__title--type1">
+                ボックスの見出し
+              </div>
+              <p>
+                ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。
+              </p>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-box c-box--type1&quot;&gt;
+	&lt;div class=&quot;c-box__title c-box__title--type1&quot;&gt;ボックスの見出し&lt;/div&gt;
+	&lt;p&gt;ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-box--type2</h3>
+          <p class="e-introduction">見出しを塗りつぶしたボックスです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-box c-box--type2">
+              <div class="c-box__title c-box__title--type2">
+                ボックスの見出し
+              </div>
+              <p>
+                ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。
+              </p>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-box c-box--type2&quot;&gt;
+	&lt;div class=&quot;c-box__title c-box__title--type2&quot;&gt;ボックスの見出し&lt;/div&gt;
+	&lt;p&gt;ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。ボックスの内容です。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-breadcrumb" class="e-title-block">.c-breadcrumb</h2>
+          <p class="e-introduction">パンくずリストです。</p>
+
+          <div class="p-preview e-preview">
+            <nav class="c-breadcrumb">
+              <div class="c-breadcrumb__item">
+                <a href="index.html#">ホーム</a>
+              </div>
+              <div class="c-breadcrumb__item">
+                <a href="index.html#">カテゴリー</a>
+              </div>
+              <div class="c-breadcrumb__item">タイトル</div>
+            </nav>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;nav class=&quot;c-breadcrumb&quot;&gt;
+	&lt;div class=&quot;c-breadcrumb__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;ホーム&lt;/a&gt;&lt;/div&gt;
+	&lt;div class=&quot;c-breadcrumb__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;カテゴリー&lt;/a&gt;&lt;/div&gt;
+	&lt;div class=&quot;c-breadcrumb__item&quot;&gt;タイトル&lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-button" class="e-title-block">.c-button</h2>
+          <p class="e-introduction">標準となるボタンです。</p>
+
+          <div class="p-preview e-preview">
+            <a href="" class="c-button">ボタン</a>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;a href=&quot;&quot; class=&quot;c-button&quot;&gt;ボタン&lt;/a&gt;
+</code></pre>
+
+          <h3 class="e-title-modify">.c-button--shadow</h3>
+          <p class="e-introduction">影が付いたボタンです。</p>
+
+          <div class="p-preview e-preview">
+            <a href="" class="c-button c-button--shadow">ボタン</a>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;a href=&quot;&quot; class=&quot;c-button c-button--shadow&quot;&gt;ボタン&lt;/a&gt;
+</code></pre>
+
+          <h3 class="e-title-modify">.c-button--goast</h3>
+          <p class="e-introduction">
+            ゴーストボタンです。濃い背景の場合だけ使えます。
+          </p>
+
+          <div class="p-preview e-preview m-dark">
+            <a href="" class="c-button c-button--goast">ボタン</a>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;a href=&quot;&quot; class=&quot;c-button c-button--goast&quot;&gt;ボタン&lt;/a&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-button--arrow</h3>
+          <p class="e-introduction">アローアイコン付きのボタンです。</p>
+
+          <div class="p-preview e-preview">
+            <a href="" class="c-button c-button--arrow">ボタン</a>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;a href=&quot;&quot; class=&quot;c-button c-button--arrow&quot;&gt;ボタン&lt;/a&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-card" class="e-title-block">.c-card</h2>
+          <p class="e-introduction">
+            画像とテキストが縦並びのシンプルなカードです。
+          </p>
+
+          <div class="p-preview e-preview">
+            <div class="c-card">
+              <div class="c-card__img">
+                <img src="../src/img/cat.jpg" alt="" />
+              </div>
+              <div class="c-card__body">
+                <div class="c-card__meta">
+                  <time class="c-card__time" datetime="2019-01-01">
+                    2019-01-01
+                  </time>
+                  <div class="c-card__label">ラベル</div>
+                </div>
+                <div class="c-card__title">タイトル</div>
+                <p class="c-card__excerpt">
+                  抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-card&quot;&gt;
+	&lt;div class=&quot;c-card__img&quot;&gt;
+		&lt;img src=&quot;../src/img/cat.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-card__body&quot;&gt;
+		&lt;div class=&quot;c-card__meta&quot;&gt;
+			&lt;time class=&quot;c-card__time&quot; datetime=&quot;2019-01-01&quot;&gt;2019-01-01&lt;/time&gt;
+			&lt;div class=&quot;c-card__label&quot;&gt;ラベル&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;c-card__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;p class=&quot;c-card__excerpt&quot;&gt;抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-card--shadow</h3>
+          <p class="e-introduction">影が付いたカードです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-card c-card--shadow">
+              <div class="c-card__img">
+                <img src="../src/img/cat.jpg" alt="" />
+              </div>
+              <div class="c-card__body">
+                <div class="c-card__meta">
+                  <time class="c-card__time" datetime="2019-01-01">
+                    2019-01-01
+                  </time>
+                  <div class="c-card__label">ラベル</div>
+                </div>
+                <div class="c-card__title">タイトル</div>
+                <p class="c-card__excerpt">
+                  抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-card c-card--shadow&quot;&gt;
+	&lt;div class=&quot;c-card__img&quot;&gt;
+		&lt;img src=&quot;../src/img/cat.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-card__body&quot;&gt;
+		&lt;div class=&quot;c-card__meta&quot;&gt;
+			&lt;time class=&quot;c-card__time&quot; datetime=&quot;2019-01-01&quot;&gt;2019-01-01&lt;/time&gt;
+			&lt;div class=&quot;c-card__label&quot;&gt;ラベル&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;c-card__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;p class=&quot;c-card__excerpt&quot;&gt;抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-card--horizon</h3>
+          <p class="e-introduction">画像とテキストが横並びになるカードです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-card c-card--horizon">
+              <div class="c-card__img c-card__img--horizon">
+                <img src="../src/img/cat.jpg" alt="" />
+              </div>
+              <div class="c-card__body c-card__body--horizon">
+                <div class="c-card__meta">
+                  <time class="c-card__time" datetime="2019-01-01">
+                    2019-01-01
+                  </time>
+                  <div class="c-card__label">ラベル</div>
+                </div>
+                <div class="c-card__title">タイトル</div>
+                <p class="c-card__excerpt">
+                  抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。
+                </p>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-card c-card--horizon&quot;&gt;
+	&lt;div class=&quot;c-card__img c-card__img--horizon&quot;&gt;
+		&lt;img src=&quot;../src/img/cat.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-card__body c-card__body--horizon&quot;&gt;
+		&lt;div class=&quot;c-card__meta&quot;&gt;
+			&lt;time class=&quot;c-card__time&quot; datetime=&quot;2019-01-01&quot;&gt;2019-01-01&lt;/time&gt;
+			&lt;div class=&quot;c-card__label&quot;&gt;ラベル&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;c-card__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;p class=&quot;c-card__excerpt&quot;&gt;抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。抜粋のところ。&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-drawer" class="e-title-block">.c-drawer</h2>
+          <p class="e-introduction">右から開くドロワーです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer01"
+                data-target="for-drawer01"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div
+                class="c-drawer__close js-drawer for-drawer01"
+                data-target="for-drawer01"
+              ></div>
+              <div class="c-drawer__content for-drawer01">コンテンツ部分</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-drawer&quot;&gt;
+	&lt;div class=&quot;c-drawer__icon js-drawer for-drawer01&quot; data-target=&quot;for-drawer01&quot;&gt;
+		&lt;div class=&quot;c-drawer__bars&quot;&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-drawer__close js-drawer for-drawer01&quot; data-target=&quot;for-drawer01&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;c-drawer__content for-drawer01&quot;&gt;コンテンツ部分&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-drawer__content--left</h3>
+          <p class="e-introduction">左から開くドロワーです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer02"
+                data-target="for-drawer02"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div
+                class="c-drawer__close js-drawer for-drawer02"
+                data-target="for-drawer02"
+              ></div>
+              <div
+                class="c-drawer__content c-drawer__content--left for-drawer02"
+              >
+                コンテンツ部分
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-drawer&quot;&gt;
+	&lt;div class=&quot;c-drawer__icon js-drawer for-drawer02&quot; data-target=&quot;for-drawer02&quot;&gt;
+		&lt;div class=&quot;c-drawer__bars&quot;&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-drawer__close js-drawer for-drawer02&quot; data-target=&quot;for-drawer02&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;c-drawer__content c-drawer__content--left for-drawer02&quot;&gt;コンテンツ部分&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-drawer__content--top</h3>
+          <p class="e-introduction">上から降りてくるドロワーです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer03"
+                data-target="for-drawer03"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div
+                class="c-drawer__close js-drawer for-drawer03"
+                data-target="for-drawer03"
+              ></div>
+              <div
+                class="c-drawer__content c-drawer__content--top for-drawer03"
+              >
+                コンテンツ部分
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-drawer&quot;&gt;
+&lt;div class=&quot;c-drawer__icon js-drawer for-drawer03&quot; data-target=&quot;for-drawer03&quot;&gt;
+&lt;div class=&quot;c-drawer__bars&quot;&gt;
+&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-drawer__close js-drawer for-drawer03&quot; data-target=&quot;for-drawer03&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;c-drawer__content c-drawer__content--top for-drawer03&quot;&gt;コンテンツ部分&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-drawer__content--cover</h3>
+          <p class="e-introduction">画面を覆うドロワーです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer04"
+                data-target="for-drawer04"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div
+                class="c-drawer__close js-drawer for-drawer04"
+                data-target="for-drawer04"
+              ></div>
+              <div
+                class="c-drawer__content c-drawer__content--cover for-drawer04"
+              >
+                コンテンツ部分
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-drawer&quot;&gt;
+&lt;div class=&quot;c-drawer__icon js-drawer for-drawer04&quot; data-target=&quot;for-drawer04&quot;&gt;
+&lt;div class=&quot;c-drawer__bars&quot;&gt;
+&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-drawer__close js-drawer for-drawer04&quot;&gt; data-target=&quot;for-drawer04&quot;&lt;/div&gt;
+&lt;div class=&quot;c-drawer__content c-drawer__content--cover for-drawer04&quot;&gt;コンテンツ部分&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h3 class="e-title-block">.c-ellipsis</h3>
+          <p class="e-introduction">
+            1行以降は3点リーダーで省略される文章です。
+          </p>
+
+          <div class="p-preview e-preview">
+            <p class="c-ellipsis">
+              吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。
+            </p>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;p class=&quot;c-ellipsis&quot;&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。&lt;/p&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-ellipsis--multiple-2</h3>
+          <p class="e-introduction">
+            2行以降は3点リーダーで省略される文章です。
+          </p>
+
+          <div class="p-preview e-preview">
+            <p class="c-ellipsis c-ellipsis--multiple-2">
+              吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。
+            </p>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;p class=&quot;c-ellipsis c-ellipsis--multiple-2&quot;&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。&lt;/p&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-ellipsis--multiple-3</h3>
+          <p class="e-introduction">
+            3行以降は3点リーダーで省略される文章です。
+          </p>
+
+          <div class="p-preview e-preview">
+            <p class="c-ellipsis c-ellipsis--multiple-3">
+              吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。
+            </p>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;p class=&quot;c-ellipsis c-ellipsis--multiple-3&quot;&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。&lt;/p&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-heading" class="e-title-block">.c-heading</h2>
+          <p class="e-introduction">標準の見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type001</h3>
+          <p class="e-introduction">
+            左のバーに破線の下線をプラスした見出しです
+          </p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type001">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type001&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type002</h3>
+          <p class="e-introduction">上下のバーに挟まれた見出しです</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type002">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type002&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type003</h3>
+          <p class="e-introduction">途中で色が変わる下線の見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type003">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type003&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type004</h3>
+          <p class="e-introduction">ステッチ風のポップな見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type004">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type004&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type005</h3>
+          <p class="e-introduction">吹き出し風の見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type005">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type005&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type006</h3>
+          <p class="e-introduction">点線の下線の見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type006">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type006&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type007</h3>
+          <p class="e-introduction">下線の見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type007">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type006&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type008</h3>
+          <p class="e-introduction">左側がバーになっている見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type008">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type008&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type009</h3>
+          <p class="e-introduction">背景色のみシンプルな見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type009">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type009&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type010</h3>
+          <p class="e-introduction">端が折り曲がった見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type010">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type010&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type011</h3>
+          <p class="e-introduction">平行四辺形の見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type011"><span>見出し</span></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type011&quot;&gt;&lt;span&gt;見出し&lt;/span&gt;&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type012</h3>
+          <p class="e-introduction">四角のアイコンから始まる見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type012">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type012&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type013</h3>
+          <p class="e-introduction">丸のアイコンから始まる見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type013">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type013&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type014</h3>
+          <p class="e-introduction">ひし形のアイコンから始まる見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type014">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type014&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type015</h3>
+          <p class="e-introduction">短いバーから始まる見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type015">見出し</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;h2 class=&quot;c-heading--type015&quot;&gt;見出し&lt;/h2&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type016</h3>
+          <p class="e-introduction">長い線に挟まれた見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type016"><span>見出し</span></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-heading--type016&quot;&gt;&lt;span&gt;見出し&lt;/span&gt;&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-heading--type017</h3>
+          <p class="e-introduction">短い線に挟まれた見出しです。</p>
+
+          <div class="p-preview e-preview">
+            <div class="c-heading--type017"><span>見出し</span></div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-heading--type017&quot;&gt;&lt;span&gt;見出し&lt;/span&gt;&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-icon" class="e-title-block">.c-icon</h2>
+          <p class="e-introduction">アイコンを集めました。</p>
+          <div class="l-row l-row--padding">
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-circle</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-circle"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-circle&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-cross</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-cross"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-cross&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-hamburger</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-hamburger"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-hamburger&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-check</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-check"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-check&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-arrow-right</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-arrow-right"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-arrow-right&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-arrow-bottom</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-arrow-bottom"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-arrow-bottom&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-arrow-left</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-arrow-left"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-arrow-left&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-arrow-top</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-arrow-top"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-arrow-top&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-triangle</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-triangle"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-triangle&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-rhombus</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-rhombus"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-rhombus&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-square</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-square"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-square&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+            <div class="l-row__col l-row__col04">
+              <h3 class="e-title-modify">.c-icon-glass</h3>
+              <div class="p-preview e-preview">
+                <div class="c-icon-glass"><span></span></div>
+              </div>
+              <pre
+                class="p-code"
+              ><code class="html">&lt;div class=&quot;c-icon-glass&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+          <!-- /l-row -->
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-list" class="e-title-block">.c-list</h2>
+          <p class="e-introduction">
+            リストスタイルを削除した標準のリストです。階層構造は維持するようになっています。
+          </p>
+          <div class="p-preview e-preview">
+            <ul class="c-list">
+              <li><a href="">リスト1</a></li>
+              <li>
+                <a href="">リスト2</a>
+                <ul>
+                  <li><a href="">子リスト1</a></li>
+                  <li>
+                    <a href="">子リスト2</a>
+                    <ul>
+                      <li><a href="">孫リスト1</a></li>
+                      <li><a href="">孫リスト2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="">リスト3</a></li>
+            </ul>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;ul class=&quot;c-list&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;&quot;&gt;リスト2&lt;/a&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;&quot;&gt;子リスト1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;&quot;&gt;子リスト2&lt;/a&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト2&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-list--disc</h3>
+          <p class="e-introduction">黒丸付きのリストです。</p>
+          <div class="p-preview e-preview">
+            <ul class="c-list c-list--disc">
+              <li><a href="">リスト1</a></li>
+              <li>
+                <a href="">リスト2</a>
+                <ul>
+                  <li><a href="">子リスト1</a></li>
+                  <li>
+                    <a href="">子リスト2</a>
+                    <ul>
+                      <li><a href="">孫リスト1</a></li>
+                      <li><a href="">孫リスト2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="">リスト3</a></li>
+            </ul>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;ul class=&quot;c-list c-list--disc&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;&quot;&gt;リスト2&lt;/a&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;&quot;&gt;子リスト1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;&quot;&gt;子リスト2&lt;/a&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト2&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-list--decimal</h3>
+          <p class="e-introduction">数字付きのリストです。</p>
+          <div class="p-preview e-preview">
+            <ul class="c-list c-list--decimal">
+              <li><a href="">リスト1</a></li>
+              <li>
+                <a href="">リスト2</a>
+                <ul>
+                  <li><a href="">子リスト1</a></li>
+                  <li>
+                    <a href="">子リスト2</a>
+                    <ul>
+                      <li><a href="">孫リスト1</a></li>
+                      <li><a href="">孫リスト2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="">リスト3</a></li>
+            </ul>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;ul class=&quot;c-list c-list--decimal&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;&quot;&gt;リスト2&lt;/a&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;&quot;&gt;子リスト1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;&quot;&gt;子リスト2&lt;/a&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト2&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-list--arrow-start</h3>
+          <p class="e-introduction">左側にアローアイコンが付いたリストです。</p>
+          <div class="p-preview e-preview">
+            <ul class="c-list c-list--arrow-start">
+              <li><a href="">リスト1</a></li>
+              <li>
+                <a href="">リスト2</a>
+                <ul>
+                  <li><a href="">子リスト1</a></li>
+                  <li>
+                    <a href="">子リスト2</a>
+                    <ul>
+                      <li><a href="">孫リスト1</a></li>
+                      <li><a href="">孫リスト2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="">リスト3</a></li>
+            </ul>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;ul class=&quot;c-list c-list--arrow-start&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;&quot;&gt;リスト2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;子リスト1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;&quot;&gt;子リスト2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-list--arrow-end</h3>
+          <p class="e-introduction">右側にアローアイコンが付いたリストです。</p>
+          <div class="p-preview e-preview">
+            <ul class="c-list c-list--arrow-end">
+              <li><a href="">リスト1</a></li>
+              <li>
+                <a href="">リスト2</a>
+                <ul>
+                  <li><a href="">子リスト1</a></li>
+                  <li>
+                    <a href="">子リスト2</a>
+                    <ul>
+                      <li><a href="">孫リスト1</a></li>
+                      <li><a href="">孫リスト2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="">リスト3</a></li>
+            </ul>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;ul class=&quot;c-list c-list--arrow-end&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;&quot;&gt;リスト2&lt;/a&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;&quot;&gt;子リスト1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;&quot;&gt;子リスト2&lt;/a&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;&quot;&gt;孫リスト2&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-list--count</h3>
+          <p class="e-introduction">
+            リスト数に応じてカウントされるリストです。
+          </p>
+          <div class="p-preview e-preview">
+            <ul class="c-list c-list--count">
+              <li><a href="">リスト1</a></li>
+              <li><a href="">リスト2</a></li>
+              <li><a href="">リスト3</a></li>
+            </ul>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;ul class=&quot;c-list c-list--count&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;リスト3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-mainvisual" class="e-title-block">.c-mainvisual</h2>
+          <p class="e-introduction">
+            ファーストビューのメインビジュアルとなる背景とタイトル、リード文を用意しています。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="c-mainvisual">
+              <div class="c-mainvisual__content">
+                <div class="c-mainvisual__title">タイトル</div>
+                <div class="c-mainvisual__lead">リード文</div>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-mainvisual&quot;&gt;
+	&lt;div class=&quot;c-mainvisual__content&quot;&gt;
+		&lt;div class=&quot;c-mainvisual__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;div class=&quot;c-mainvisual__lead&quot;&gt;リード文&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-mainvisual--mask</h3>
+          <p class="e-introduction">画像の上に透過した黒色で覆っています。</p>
+          <div class="p-preview e-preview">
+            <div class="c-mainvisual c-mainvisual--mask">
+              <div class="c-mainvisual__content">
+                <div class="c-mainvisual__title">タイトル</div>
+                <div class="c-mainvisual__lead">リード文</div>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-mainvisual c-mainvisual--mask&quot;&gt;
+	&lt;div class=&quot;c-mainvisual__content&quot;&gt;
+		&lt;div class=&quot;c-mainvisual__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;div class=&quot;c-mainvisual__lead&quot;&gt;リード文&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-mainvisual--high</h3>
+          <p class="e-introduction">画面の高さを高くします。</p>
+          <div class="p-preview e-preview">
+            <div class="c-mainvisual c-mainvisual--high">
+              <div class="c-mainvisual__content">
+                <div class="c-mainvisual__title">タイトル</div>
+                <div class="c-mainvisual__lead">リード文</div>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-mainvisual c-mainvisual--high&quot;&gt;
+	&lt;div class=&quot;c-mainvisual__content&quot;&gt;
+		&lt;div class=&quot;c-mainvisual__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;div class=&quot;c-mainvisual__lead&quot;&gt;リード文&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-mainvisual--high</h3>
+          <p class="e-introduction">画面の高さを低くします。</p>
+          <div class="p-preview e-preview">
+            <div class="c-mainvisual c-mainvisual--low">
+              <div class="c-mainvisual__content">
+                <div class="c-mainvisual__title">タイトル</div>
+                <div class="c-mainvisual__lead">リード文</div>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-mainvisual c-mainvisual--low&quot;&gt;
+	&lt;div class=&quot;c-mainvisual__content&quot;&gt;
+		&lt;div class=&quot;c-mainvisual__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;div class=&quot;c-mainvisual__lead&quot;&gt;リード文&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-mainvisual--hero</h3>
+          <p class="e-introduction">
+            画面いっぱい（ヒーローイメージ）で表示します。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="c-mainvisual c-mainvisual--hero">
+              <div class="c-mainvisual__content">
+                <div class="c-mainvisual__title">タイトル</div>
+                <div class="c-mainvisual__lead">リード文</div>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-mainvisual c-mainvisual--hero&quot;&gt;
+	&lt;div class=&quot;c-mainvisual__content&quot;&gt;
+		&lt;div class=&quot;c-mainvisual__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;div class=&quot;c-mainvisual__lead&quot;&gt;リード文&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-mainvisual--video</h3>
+          <p class="e-introduction">動画を背景のように振る舞っています。</p>
+          <div class="p-preview e-preview">
+            <div class="c-mainvisual c-mainvisual--video">
+              <video
+                class="c-mainvisual__video"
+                src="../src/img/video.mp4"
+                muted
+                autoplay
+                loop
+              ></video>
+              <div class="c-mainvisual__content">
+                <div class="c-mainvisual__title">タイトル</div>
+                <div class="c-mainvisual__lead">リード文</div>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-mainvisual c-mainvisual--video&quot;&gt;
+	&lt;video class=&quot;c-mainvisual__video&quot; src=&quot;../src/img/video.mp4&quot; muted autoplay loop&gt;&lt;/video&gt;
+	&lt;div class=&quot;c-mainvisual__content&quot;&gt;
+		&lt;div class=&quot;c-mainvisual__title&quot;&gt;タイトル&lt;/div&gt;
+		&lt;div class=&quot;c-mainvisual__lead&quot;&gt;リード文&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-marker" class="e-title-block">.c-marker</h2>
+          <p class="e-introduction">文字全体を覆ったマーカーです。</p>
+          <div class="p-preview e-preview">
+            <p>
+              ここは
+              <span class="c-marker">マーカー</span>
+              です。
+            </p>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;p&gt;ここは&lt;span class=&quot;c-marker&quot;&gt;マーカー&lt;/span&gt;です。&lt;/p&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-marker--thin</h3>
+          <p class="e-introduction">
+            文字の途中までハイライトされたマーカーです。
+          </p>
+          <div class="p-preview e-preview">
+            <p>
+              ここは
+              <span class="c-marker c-marker--thin">マーカー</span>
+              です。
+            </p>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;p&gt;ここは&lt;span class=&quot;c-marker c-marker--thin&quot;&gt;マーカー&lt;/span&gt;です。&lt;/p&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-marker--stripe</h3>
+          <p class="e-introduction">ストライプ状のマーカーです。</p>
+          <div class="p-preview e-preview">
+            <p>
+              ここは
+              <span class="c-marker c-marker--stripe">マーカー</span>
+              です。
+            </p>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;p&gt;ここは&lt;span class=&quot;c-marker c-marker--stripe&quot;&gt;マーカー&lt;/span&gt;です。&lt;/p&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-marker--cover</h3>
+          <p class="e-introduction">改行しても途切れないマーカーです。</p>
+          <div class="p-preview e-preview">
+            <div class="c-marker c-marker--cover">
+              マーカーを
+              <br />
+              改行しても
+              <br />
+              マーカーのまま
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-marker c-marker--cover&quot;&gt;マーカーを&lt;br /&gt;改行しても&lt;br /&gt;マーカーのまま&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-modal" class="e-title-modify">.c-modal</h2>
+          <p class="e-introduction">
+            画面中央に表示されるモーダルウインドウです。周りの黒い部分をクリックすることで閉じることができます。
+          </p>
+          <div class="p-preview e-preview">
+            <a href="" class="c-button js-modal" data-target="for-modal01">
+              モーダルを開く
+            </a>
+            <div id="for-modal01" class="c-modal">
+              <div class="c-modal__content">
+                <p>モーダルのコンテンツ</p>
+              </div>
+              <div
+                class="c-modal__close js-modal"
+                data-target="for-modal01"
+              ></div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;a href=&quot;&quot; class=&quot;c-button js-modal&quot; data-target=&quot;for-modal01&quot;&gt;モーダルを開く&lt;/a&gt;
+&lt;div id=&quot;for-modal01&quot; class=&quot;c-modal&quot;&gt;
+	&lt;div class=&quot;c-modal__content&quot;&gt;
+		&lt;p&gt;モーダルのコンテンツ&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-modal__close js-modal&quot; data-target=&quot;for-modal01&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 id="a-c-modal-cover" class="e-title-modify">
+            .c-modal__content--cover
+          </h3>
+          <p class="e-introduction">
+            画面いっぱいに開くモーダルウインドウです。閉じるボタンを
+            <code>.js-modal</code>
+            のクラスと
+            <code>data-target</code>
+            で作成してあげます。
+          </p>
+          <div class="p-preview e-preview">
+            <a
+              href=""
+              class="c-button js-modal"
+              data-target="for-modal-cover01"
+            >
+              モーダルを開く
+            </a>
+            <div id="for-modal-cover01" class="c-modal">
+              <div class="c-modal__content c-modal__content--cover">
+                <p>モーダルのコンテンツ</p>
+                <a
+                  href=""
+                  class="c-button js-modal"
+                  data-target="for-modal-cover01"
+                >
+                  モーダルを閉じる
+                </a>
+              </div>
+              <div
+                class="c-modal__close js-modal"
+                data-target="for-modal-cover01"
+              ></div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;a href=&quot;&quot; class=&quot;c-button js-modal&quot; data-target=&quot;for-modal-cover01&quot;&gt;モーダルを開く&lt;/a&gt;
+&lt;div id=&quot;for-modal-cover01&quot; class=&quot;c-modal&quot;&gt;
+	&lt;div class=&quot;c-modal__content c-modal__content--cover&quot;&gt;
+		&lt;p&gt;モーダルのコンテンツ&lt;/p&gt;
+		&lt;a href=&quot;&quot; class=&quot;c-button js-modal&quot; data-target=&quot;for-modal-cover01&quot;&gt;モーダルを閉じる&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-modal__close js-modal&quot; data-target=&quot;for-modal-cover01&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-navigation" class="e-title-block">.c-navigation</h2>
+          <p class="e-introduction">
+            横並びのグローバルメニューです。サブメニューまで対応しています。
+          </p>
+          <div class="p-preview e-preview">
+            <ul class="c-navigation">
+              <li><a href="">メニュー1</a></li>
+              <li>
+                <a href="">メニュー2</a>
+                <ul class="c-navigation__sub">
+                  <li><a href="">サブメニュー1</a></li>
+                  <li><a href="">サブメニュー2</a></li>
+                  <li><a href="">サブメニュー3</a></li>
+                </ul>
+              </li>
+              <li><a href="">メニュー3</a></li>
+              <li><a href="">メニュー4</a></li>
+              <li><a href="">メニュー5</a></li>
+            </ul>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;ul class=&quot;c-navigation&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;メニュー1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;&quot;&gt;メニュー2&lt;/a&gt;
+		&lt;ul class=&quot;c-navigation__sub&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;&quot;&gt;サブメニュー1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;&quot;&gt;サブメニュー2&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;&quot;&gt;サブメニュー3&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;メニュー3&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;メニュー4&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;メニュー5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-section-head" class="e-title-block">.c-section-head</h2>
+          <p class="e-introduction">セクション用の見出しとリード文です。</p>
+          <div class="p-preview e-preview">
+            <div class="c-section-head">
+              <div class="c-section-title">セクション</div>
+              <div class="c-section-lead">リード</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-section-head&quot;&gt;
+	&lt;div class=&quot;c-section-title&quot;&gt;セクション&lt;/div&gt;
+	&lt;div class=&quot;c-section-lead&quot;&gt;リード&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-tab" class="e-title-block">.c-tab</h2>
+          <p class="e-introduction">
+            選択したタブに応じてコンテンツが切り替わります。
+            <code>data-target</code>
+            に対応するコンテンツを指定してあげます。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="c-tab">
+              <nav class="c-tab__nav">
+                <div
+                  class="c-tab__item js-tab is-checked"
+                  data-target="for-tab01"
+                >
+                  タブ1
+                </div>
+                <div class="c-tab__item js-tab" data-target="for-tab02">
+                  タブ2
+                </div>
+                <div class="c-tab__item js-tab" data-target="for-tab03">
+                  タブ3
+                </div>
+              </nav>
+              <div class="c-tab__contents">
+                <div id="for-tab01" class="c-tab__content is-checked">
+                  タブ1のコンテンツ
+                </div>
+                <div id="for-tab02" class="c-tab__content">
+                  タブ2のコンテンツ
+                </div>
+                <div id="for-tab03" class="c-tab__content">
+                  タブ3のコンテンツ
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-tab&quot;&gt;
+	&lt;nav class=&quot;c-tab__nav&quot;&gt;
+		&lt;div class=&quot;c-tab__item js-tab is-checked&quot; data-target=&quot;for-tab01&quot;&gt;タブ1&lt;/div&gt;
+		&lt;div class=&quot;c-tab__item js-tab&quot; data-target=&quot;for-tab02&quot;&gt;タブ2&lt;/div&gt;
+		&lt;div class=&quot;c-tab__item js-tab&quot; data-target=&quot;for-tab03&quot;&gt;タブ3&lt;/div&gt;
+	&lt;/nav&gt;
+	&lt;div class=&quot;c-tab__contents&quot;&gt;
+		&lt;div id=&quot;for-tab01&quot; class=&quot;c-tab__content is-checked&quot;&gt;
+			タブ1のコンテンツ
+		&lt;/div&gt;
+		&lt;div id=&quot;for-tab02&quot; class=&quot;c-tab__content&quot;&gt;
+			タブ2のコンテンツ
+		&lt;/div&gt;
+		&lt;div id=&quot;for-tab03&quot; class=&quot;c-tab__content&quot;&gt;
+			タブ3のコンテンツ
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-table" class="e-title-block">.c-table</h2>
+          <p class="e-introduction">通常のテーブルです。</p>
+          <div class="p-preview e-preview">
+            <table class="c-table">
+              <tr>
+                <th>head</th>
+                <th>head</th>
+                <th>head</th>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data data</td>
+                <td>data data data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+              </tr>
+            </table>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;table class=&quot;c-table&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;head&lt;/th&gt;
+		&lt;th&gt;head&lt;/th&gt;
+		&lt;th&gt;head&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data data&lt;/td&gt;
+		&lt;td&gt;data data data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h3 class="e-title-modify">.c-table--fixed</h3>
+          <p class="e-introduction">横幅が均一になるテーブルです。</p>
+          <div class="p-preview e-preview">
+            <table class="c-table c-table--fixed">
+              <tr>
+                <th>head</th>
+                <th>head</th>
+                <th>head</th>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data data</td>
+                <td>data data data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+              </tr>
+            </table>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;table class=&quot;c-table c-table--fixed&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;head&lt;/th&gt;
+		&lt;th&gt;head&lt;/th&gt;
+		&lt;th&gt;head&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data data&lt;/td&gt;
+		&lt;td&gt;data data data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h3 class="e-title-modify">.c-table--striped</h3>
+          <p class="e-introduction">偶数行でハイライトされるテーブルです。</p>
+          <div class="p-preview e-preview">
+            <table class="c-table c-table--striped">
+              <tr>
+                <th>head</th>
+                <th>head</th>
+                <th>head</th>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data data</td>
+                <td>data data data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+              </tr>
+            </table>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;table class=&quot;c-table c-table--striped&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;head&lt;/th&gt;
+		&lt;th&gt;head&lt;/th&gt;
+		&lt;th&gt;head&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data data&lt;/td&gt;
+		&lt;td&gt;data data data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h3 class="e-title-modify">.c-table--horizon</h3>
+          <p class="e-introduction">横線だけで区切られたテーブルです。</p>
+          <div class="p-preview e-preview">
+            <table class="c-table c-table--horizon">
+              <tr>
+                <th>head</th>
+                <th>head</th>
+                <th>head</th>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data data</td>
+                <td>data data data</td>
+              </tr>
+              <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+              </tr>
+            </table>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;table class=&quot;c-table c-table--horizon&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;head&lt;/th&gt;
+		&lt;th&gt;head&lt;/th&gt;
+		&lt;th&gt;head&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data data&lt;/td&gt;
+		&lt;td&gt;data data data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h3 class="e-title-modify">.c-table-responsive</h3>
+          <p class="e-introduction">
+            画面からはみ出ると水平スクロールしてくれるテーブルです。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="c-table-responsive">
+              <table class="c-table">
+                <tr>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                  <th>head</th>
+                </tr>
+                <tr>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                  <td>data</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-table-responsive&quot;&gt;
+	&lt;table class=&quot;c-table&quot;&gt;
+		&lt;tr&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+			&lt;td&gt;data&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-text" class="e-title-block">.c-text</h2>
+          <p class="e-introduction">標準のテキストボックスです。</p>
+          <div class="p-preview e-preview">
+            <input type="text" name="your-text" class="c-text" value="" />
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;input type=&quot;text&quot; name=&quot;your-text&quot; class=&quot;c-text&quot; value=&quot;&quot; /&gt;</code></pre>
+          <h3 class="e-title-modify">.c-text--full</h3>
+          <p class="e-introduction">
+            横幅いっぱいに広げたテキストボックスです。
+          </p>
+          <div class="p-preview e-preview">
+            <input
+              type="text"
+              name="your-text"
+              class="c-text c-text--full"
+              value=""
+            />
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;input type=&quot;text&quot; name=&quot;your-text&quot; class=&quot;c-text c-text--full&quot; value=&quot;&quot; /&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-textarea" class="e-title-block">.c-textarea</h2>
+          <p class="e-introduction">標準のテキストエリアです。</p>
+          <div class="p-preview e-preview">
+            <textarea name="your-textarea" class="c-textarea"></textarea>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;textarea name=&quot;your-textarea&quot; class=&quot;c-textarea&quot;&gt;&lt;/textarea&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-textarea--resize</h3>
+          <p class="e-introduction">
+            右下で大きさを変更できるテキストエリアです。
+          </p>
+          <div class="p-preview e-preview">
+            <textarea
+              name="your-textarea"
+              class="c-textarea c-textarea--resize"
+            ></textarea>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;textarea name=&quot;your-textarea&quot; class=&quot;c-textarea c-textarea--resize&quot;&gt;&lt;/textarea&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-textarea--full</h3>
+          <p class="e-introduction">横幅いっぱいに広げたテキストエリアです。</p>
+          <div class="p-preview e-preview">
+            <textarea
+              name="your-textarea"
+              class="c-textarea c-textarea--full"
+            ></textarea>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;textarea name=&quot;your-textarea&quot; class=&quot;c-textarea c-textarea--full&quot;&gt;&lt;/textarea&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-radio" class="e-title-block">.c-radio</h2>
+          <p class="e-introduction">
+            標準のラジオボタンです。ラジオボタンのアイコンはCSSで作成しています。
+          </p>
+          <div class="p-preview e-preview">
+            <label>
+              <input
+                type="radio"
+                name="your-radio"
+                value="ラジオ1"
+                class="c-radio"
+                checked
+              />
+              <span>ラジオ1</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="your-radio"
+                value="ラジオ2"
+                class="c-radio"
+              />
+              <span>ラジオ2</span>
+            </label>
+          </div>
+          <pre class="p-code"><code class="html">&lt;label&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;your-radio&quot; value=&quot;ラジオ1&quot; class=&quot;c-radio&quot; checked /&gt;
+	&lt;span&gt;ラジオ1&lt;/span&gt;
+&lt;/label&gt;
+&lt;label&gt;
+	&lt;input type=&quot;radio&quot; name=&quot;your-radio&quot; value=&quot;ラジオ2&quot; class=&quot;c-radio&quot; /&gt;
+	&lt;span&gt;ラジオ2&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.c-checkbox</h2>
+          <p class="e-introduction">
+            標準のチェックボックスです。チェックアイコンはCSSで作成しています。
+          </p>
+          <div class="p-preview e-preview">
+            <label>
+              <input
+                type="checkbox"
+                class="c-checkbox"
+                name="your-checkbox"
+                value="チェックボックス1"
+              />
+              <span>チェックボックス1</span>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="c-checkbox"
+                name="your-checkbox"
+                value="チェックボックス2"
+              />
+              <span>チェックボックス2</span>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="c-checkbox"
+                name="your-checkbox"
+                value="チェックボックス3"
+              />
+              <span>チェックボックス3</span>
+            </label>
+          </div>
+          <pre class="p-code"><code class="html">&lt;label&gt;
+	&lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; name=&quot;your-checkbox&quot; value=&quot;チェックボックス1&quot; /&gt;
+	&lt;span&gt;チェックボックス1&lt;/span&gt;
+&lt;/label&gt;
+&lt;label&gt;
+	&lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; name=&quot;your-checkbox&quot; value=&quot;チェックボックス2&quot; /&gt;
+	&lt;span&gt;チェックボックス2&lt;/span&gt;
+&lt;/label&gt;
+&lt;label&gt;
+	&lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; name=&quot;your-checkbox&quot; value=&quot;チェックボックス3&quot; /&gt;
+	&lt;span&gt;チェックボックス3&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.c-select</h2>
+          <p class="e-introduction">
+            標準のセレクトボックスです。アローアイコンは背景画像で作成しています。
+          </p>
+          <div class="p-preview e-preview">
+            <select name="your-select" class="c-select">
+              <option value="セレクト1">セレクト1</option>
+              <option value="セレクト2">セレクト2</option>
+              <option value="セレクト3">セレクト3</option>
+              <option value="セレクト4">セレクト4</option>
+              <option value="セレクト5">セレクト5</option>
+            </select>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;select name=&quot;your-select&quot; class=&quot;c-select&quot;&gt;
+	&lt;option value=&quot;セレクト1&quot;&gt;セレクト1&lt;/option&gt;
+	&lt;option value=&quot;セレクト2&quot;&gt;セレクト2&lt;/option&gt;
+	&lt;option value=&quot;セレクト3&quot;&gt;セレクト3&lt;/option&gt;
+	&lt;option value=&quot;セレクト4&quot;&gt;セレクト4&lt;/option&gt;
+	&lt;option value=&quot;セレクト5&quot;&gt;セレクト5&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-select--full</h3>
+          <p class="e-introduction">
+            横幅いっぱいに広げたセレクトボックスです。
+          </p>
+          <div class="p-preview e-preview">
+            <select name="your-select" class="c-select c-select--full">
+              <option value="セレクト1">セレクト1</option>
+              <option value="セレクト2">セレクト2</option>
+              <option value="セレクト3">セレクト3</option>
+              <option value="セレクト4">セレクト4</option>
+              <option value="セレクト5">セレクト5</option>
+            </select>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;select name=&quot;your-select&quot; class=&quot;c-select c-select--full&quot;&gt;
+	&lt;option value=&quot;セレクト1&quot;&gt;セレクト1&lt;/option&gt;
+	&lt;option value=&quot;セレクト2&quot;&gt;セレクト2&lt;/option&gt;
+	&lt;option value=&quot;セレクト3&quot;&gt;セレクト3&lt;/option&gt;
+	&lt;option value=&quot;セレクト4&quot;&gt;セレクト4&lt;/option&gt;
+	&lt;option value=&quot;セレクト5&quot;&gt;セレクト5&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+          <h3 class="e-title-modify">multiple</h3>
+          <p class="e-introduction">複数選択が可能なセレクトボックスです。</p>
+          <div class="p-preview e-preview">
+            <select name="your-select" class="c-select" multiple>
+              <option value="セレクト1">セレクト1</option>
+              <option value="セレクト2">セレクト2</option>
+              <option value="セレクト3">セレクト3</option>
+              <option value="セレクト4">セレクト4</option>
+              <option value="セレクト5">セレクト5</option>
+            </select>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;select name=&quot;your-select&quot; class=&quot;c-select&quot; multiple&gt;
+	&lt;option value=&quot;セレクト1&quot;&gt;セレクト1&lt;/option&gt;
+	&lt;option value=&quot;セレクト2&quot;&gt;セレクト2&lt;/option&gt;
+	&lt;option value=&quot;セレクト3&quot;&gt;セレクト3&lt;/option&gt;
+	&lt;option value=&quot;セレクト4&quot;&gt;セレクト4&lt;/option&gt;
+	&lt;option value=&quot;セレクト5&quot;&gt;セレクト5&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-file" class="e-title-block">.c-file</h2>
+          <p class="e-introduction">
+            ファイル選択フォームを標準化しています。JavaScriptに依存するので、
+            <code>.js-file</code>
+            が設定されています。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="c-file">
+              <label class="c-file__label" for="your-file">ファイル添付</label>
+              <input
+                type="file"
+                name="your-file"
+                id="your-file"
+                class="c-file__input js-file"
+              />
+              <span class="c-file__result"></span>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-file&quot;&gt;
+	&lt;label class=&quot;c-file__label&quot; for=&quot;your-file&quot;&gt;ファイル添付&lt;/label&gt;
+	&lt;input type=&quot;file&quot; name=&quot;your-file&quot; id=&quot;your-file&quot; class=&quot;c-file__input js-file&quot; /&gt;
+	&lt;span class=&quot;c-file__result&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-accordion" class="e-title-block">.c-accordion</h2>
+          <p class="e-introduction">
+            クリックすると開くアコーディオンです。JavaScriptで制御しているので、
+            <code>.js-accordion</code>
+            を指定しています。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="c-accordion">
+              <div class="c-accordion__title js-accordion">タイトル</div>
+              <div class="c-accordion__content js-accordion-content">
+                コンテンツ部分
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-accordion&quot;&gt;
+	&lt;div class=&quot;c-accordion__title js-accordion&quot;&gt;タイトル&lt;/div&gt;
+	&lt;div class=&quot;c-accordion__content js-accordion-content&quot;&gt;
+		コンテンツ部分
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.c-accordion__title--arrow</h3>
+          <p class="e-introduction">
+            アローアイコン付きのアコーディオンです。開くとアローアイコンの向きが反転するようにしています。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="c-accordion c-accordion--arrow">
+              <div
+                class="
+                  c-accordion__title c-accordion__title--arrow
+                  js-accordion
+                "
+              >
+                タイトル
+              </div>
+              <div class="c-accordion__content js-accordion-content">
+                コンテンツ部分
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-accordion&quot;&gt;
+	&lt;div class=&quot;c-accordion__title c-accordion__title--arrow js-accordion&quot;&gt;タイトル&lt;/div&gt;
+	&lt;div class=&quot;c-accordion__content js-accordion-content&quot;&gt;
+		コンテンツ部分
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-c-pagenation" class="e-title-block">.c-pagenation</h2>
+          <p class="e-introduction">
+            ページネーション用のクラス。基本的なアイテムは統一して、現在のページと次へと前への装飾を可能にしています。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="c-pagenation">
+              <a class="c-pagenation__num c-pagenation__num--prev" href="">
+                &lt;
+              </a>
+              <span class="c-pagenation__num c-pagenation__num--current">
+                1
+              </span>
+              <a class="c-pagenation__num" href="">2</a>
+              <a class="c-pagenation__num" href="">3</a>
+              <a class="c-pagenation__num c-pagenation__num--next" href="">
+                &gt;
+              </a>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-pagenation&quot;&gt;
+	&lt;a class=&quot;c-pagenation__num c-pagenation__num--prev&quot; href=&quot;&quot;&gt;&amp;lt;&lt;/a&gt;
+	&lt;span class=&quot;c-pagenation__num c-pagenation__num--current&quot;&gt;1&lt;/span&gt;
+	&lt;a class=&quot;c-pagenation__num&quot; href=&quot;&quot;&gt;2&lt;/a&gt;
+	&lt;a class=&quot;c-pagenation__num&quot; href=&quot;&quot;&gt;3&lt;/a&gt;
+	&lt;a class=&quot;c-pagenation__num c-pagenation__num--next&quot; href=&quot;&quot;&gt;&amp;gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.c-loading</h2>
+          <p class="e-introduction">
+            ページが読み込まれるまでのローディング画面です。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-loading&quot;&gt;
+	&lt;div class=&quot;c-loading__content&quot;&gt;loading...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="p-copy">&copy;copyright</div>
+      </div>
+    </footer>
+
+    <div class="c-floating js-floating">
+      <a href="#" class="">
+        <div class="c-icon-arrow-top p-icon-arrow-top"><span></span></div>
+      </a>
+    </div>
+
+    <div class="c-loading">
+      <div class="c-loading__content">loading...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../src/lib/stickyfill/stickyfill.min-var=2.0.5.js"></script>
+    <script src="../src/lib/intersection-observer/intersection-observer.js"></script>
+    <script src="../src/lib/highlight/highlight.pack.js"></script>
+    <script src="../src/js/script-var=1.0.0.js"></script>
+    <script src="../src/js/my-var=1.0.0.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+@use "../global" as global;
+
+.c-tab {
+}
+
+.c-tab__nav {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid global.$tab-border-color;
+}
+
+.c-tab__item {
+  display: block;
+  padding: 0.8em 1.6em;
+  background: global.$tab-background;
+  margin-bottom: -2px;
+  transition: all 0.3s ease 0s;
+
+  &.is-checked {
+    background: global.$tab-background--active;
+    color: #fff;
+  }
+
+  @include global.mq-up("tab") {
+    &:hover {
+      background: global.$tab-background--active;
+      color: #fff;
+    }
+  }
+}
+
+.c-tab__content {
+  display: none;
+
+  &.is-checked {
+    display: block;
+  }
+}

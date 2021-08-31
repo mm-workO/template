@@ -1,0 +1,12 @@
+// https://haniwaman.com/dart-sass/の一例
+
+// @use "../global" as global;
+
+// .c-button {
+//   background-color: global.$color-main; // 変数が使われているところは全部書き換える
+
+//   @include global.mq("sp") {
+//     // mixinや関数が使われているところも全部書き換える
+//     width: 100%;
+//   }
+// }

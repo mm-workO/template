@@ -1,0 +1,8 @@
+@use "../global" as global;
+
+.l-footer {
+  width: 100%;
+  z-index: map-get(global.$layer, "footer");
+  background: global.$footer-background;
+  color: global.$footer-color;
+}

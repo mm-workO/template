@@ -1,0 +1,10 @@
+@use "../global" as global;
+// @import的にsettingやfunctionで定義した変数を使いたい場合
+@forward "container";
+@forward "footer";
+@forward "header";
+@forward "l-svg-separator";
+@forward "row";
+@forward "section";
+
+// 読み込んだ後にCSSの記述

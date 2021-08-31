@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Utility｜CSSParts</title>
+    <meta
+      name="description"
+      content="HTMLコーディングを効率化するテンプレート"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/lib/highlight/tomorrow-night-eighties.css"
+    />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link
+      rel="icon"
+      href="https://haniwaman.com/template/src/img/common/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <header class="p-header l-header">
+      <div class="l-inner">
+        <div class="l-row l-row--middle">
+          <div class="e-logo u-mr-auto">
+            <a href="../index.html">CSSParts</a>
+          </div>
+          <!-- /e-logo -->
+          <nav class="e-nav">
+            <ul class="c-navigation">
+              <li><a href="../layout/index.html">Layout</a></li>
+              <li><a href="../component/index.html">Component</a></li>
+              <li><a href="index.html">Utility</a></li>
+              <li><a href="../javascript/index.html">JavaScript</a></li>
+            </ul>
+          </nav>
+          <!-- /e-nav -->
+          <nav class="e-drawer">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer-header"
+                data-target="for-drawer-header"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div class="c-drawer__close js-drawer for-drawer-header"></div>
+              <div class="c-drawer__content for-drawer-header">
+                <ul class="c-list">
+                  <li><a href="../foundation/index.html">Foundation</a></li>
+                  <li><a href="../layout/index.html">Layout</a></li>
+                  <li><a href="../component/index.html">Component</a></li>
+                  <li><a href="../project/index.html">Project</a></li>
+                  <li><a href="index.html">Utility</a></li>
+                  <li><a href="../setting/index.html">Setting</a></li>
+                  <li><a href="../external/index.html">External</a></li>
+                  <li><a href="../javascript/index.html">JavaScript</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- /e-drawer -->
+        </div>
+        <!-- /l-row -->
+      </div>
+      <!-- /l-inner -->
+    </header>
+    <!-- /l-header -->
+
+    <div class="c-mainvisual">
+      <div class="c-mainvisual__content">
+        <h1 class="c-mainvisual__title">Utility</h1>
+        <div class="c-mainvisual__lead">
+          ちょっとした調整のために使われます。余白の調整や非表示など。
+        </div>
+      </div>
+    </div>
+
+    <div class="p-content">
+      <div class="l-inner c-flex m-padding">
+        <main class="e-main e-col e-col08">
+          <section class="p-component">
+            <h2 id="a-u-hidden" class="e-title-block">.u-hidden</h2>
+            <p class="e-introduction">横幅に応じて非表示が指定できます。</p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="u-hidden-pc">PCで非表示</div>
+              <div class="u-hidden-tab">タブレットで非表示</div>
+              <div class="u-hidden-sp">スマホで非表示</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;u-hidden-pc&quot;&gt;PCで非表示&lt;/div&gt;
+&lt;div class=&quot;u-hidden-tab&quot;&gt;タブレットで非表示&lt;/div&gt;
+&lt;div class=&quot;u-hidden-sp&quot;&gt;スマホで非表示&lt;/div&gt;</code></pre>
+          </section>
+
+          <section class="p-component">
+            <h2 id="a-u-text" class="e-title-block">.u-text</h2>
+            <p class="e-introduction">
+              <code>text-align</code>
+              でテキストの配置を指定できます。
+            </p>
+            <h3 id="a-u-text-left" class="e-title-modify">.u-text-left</h3>
+            <p class="e-introduction">左揃え。</p>
+            <div class="p-preview e-preview u-px-0">
+              <p class="u-text-left">吾輩は猫である。名前はまだ無い。</p>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;p class=&quot;u-text-left&quot;&gt;吾輩は猫である。名前はまだ無い。&lt;/p&gt;</code></pre>
+            <h3 id="a-u-text-center" class="e-title-modify">.u-text-center</h3>
+            <p class="e-introduction">中央揃え。</p>
+            <div class="p-preview e-preview u-px-0">
+              <p class="u-text-center">吾輩は猫である。名前はまだ無い。</p>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;p class=&quot;u-text-center&quot;&gt;吾輩は猫である。名前はまだ無い。&lt;/p&gt;</code></pre>
+            <h3 id="a-u-text-right" class="e-title-modify">.u-text-right</h3>
+            <p class="e-introduction">右揃え。</p>
+            <div class="p-preview e-preview u-px-0">
+              <p class="u-text-right">吾輩は猫である。名前はまだ無い。</p>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;p class=&quot;u-text-right&quot;&gt;吾輩は猫である。名前はまだ無い。&lt;/p&gt;</code></pre>
+            <h3 id="a-u-text-justify" class="e-title-modify">
+              .u-text-justify
+            </h3>
+            <p class="e-introduction">均等割当。</p>
+            <div class="p-preview e-preview u-px-0">
+              <p class="u-text-justify">吾輩は猫である。名前はまだ無い。</p>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;p class=&quot;u-text-justify&quot;&gt;吾輩は猫である。名前はまだ無い。&lt;/p&gt;</code></pre>
+          </section>
+
+          <section class="p-component">
+            <h2 id="a-u-writing" class="e-title-block">.u-writing</h2>
+            <p class="e-introduction">書き方に関する指定ができます。</p>
+            <h3 id="a-u-japanease" class="e-title-modify">.u-japanease</h3>
+            <p class="e-introduction">縦書き。</p>
+            <div class="p-preview e-preview u-px-0">
+              <p class="u-japanease">
+                吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。
+              </p>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;p class=&quot;u-japanease&quot;&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;</code></pre>
+            <h3 id="a-u-word-break" class="e-title-modify">.u-word-break</h3>
+            <p class="e-introduction">強制改行。</p>
+            <div class="p-preview e-preview u-px-0">
+              <p class="u-word-break">
+                吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。
+              </p>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;p class=&quot;u-word-break&quot;&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;</code></pre>
+            <h3 id="a-u-white-space" class="e-title-modify">.u-white-space</h3>
+            <p class="e-introduction">改行禁止。</p>
+            <div class="p-preview e-preview u-px-0">
+              <p class="u-white-space">
+                吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。
+              </p>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;p class=&quot;u-white-space&quot;&gt;吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。&lt;/p&gt;</code></pre>
+          </section>
+
+          <section class="p-component">
+            <h2 id="a-u-hover" class="e-title-block">.u-hover</h2>
+            <p class="e-introduction">マウスホバー時の動きを制御します。</p>
+            <h3 id="a-u-scale" class="e-title-modify">.u-hover-scale</h3>
+            <p class="e-introduction">マウスホバー時に拡大します。</p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn u-hover-scale">拡大</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn u-hover-scale&quot;&gt;拡大&lt;/div&gt;</code></pre>
+            <h3 id="a-u-opacity" class="e-title-modify">.u-hover-opacity</h3>
+            <p class="e-introduction">マウスホバー時に透過します。</p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn u-hover-opacity">透過</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn u-hover-opacity&quot;&gt;透過&lt;/div&gt;</code></pre>
+            <h3 id="a-u-up" class="e-title-modify">.u-hover-up</h3>
+            <p class="e-introduction">マウスホバー時に上に移動します。</p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn u-hover-up">上に移動</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn u-hover-up&quot;&gt;上に移動&lt;/div&gt;</code></pre>
+            <h3 id="a-u-down" class="e-title-modify">.u-hover-down</h3>
+            <p class="e-introduction">マウスホバー時に下に移動します。</p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn u-hover-down">下に移動</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn u-hover-down&quot;&gt;下に移動&lt;/div&gt;</code></pre>
+            <h3 id="a-u-rotate-x" class="e-title-modify">.u-hover-rotate-x</h3>
+            <p class="e-introduction">
+              マウスホバー時にX軸を中心に回転します。
+            </p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn u-hover-rotate-x">X軸を中心に回転</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn u-hover-rotate-x&quot;&gt;X軸を中心に回転&lt;/div&gt;</code></pre>
+            <h3 id="a-u-rotate-y" class="e-title-modify">.u-rotate-y</h3>
+            <p class="e-introduction">
+              マウスホバー時にY軸を中心に回転します。
+            </p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn u-hover-rotate-y">Y軸を中心に回転</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn u-hover-rotate-y&quot;&gt;Y軸を中心に回転&lt;/div&gt;</code></pre>
+            <h3 id="a-u-rotate-z" class="e-title-modify">.u-rotate-z</h3>
+            <p class="e-introduction">
+              マウスホバー時にZ軸を中心に回転します。
+            </p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn u-hover-rotate-z">Z軸を中心に回転</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn u-hover-rotate-z&quot;&gt;Z軸を中心に回転&lt;/div&gt;</code></pre>
+          </section>
+
+          <section class="p-component">
+            <h2 id="a-u-parallax" class="e-title-block">.u-parallax</h2>
+            <p class="e-introduction">画面に登場した時の動きを制御できます。</p>
+            <h3 id="a-u-fadein" class="e-title-modify">.u-fadein</h3>
+            <p class="e-introduction">フェードインで表示されます。</p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn js-anim u-fadein">fadein</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn js-anim u-fadein&quot;&gt;fadein&lt;/div&gt;</code></pre>
+            <h3 id="a-u-fadein-up" class="e-title-modify">.u-fadein-up</h3>
+            <p class="e-introduction">
+              上に移動しながらのフェードインで表示されます。
+            </p>
+            <div class="p-preview e-preview u-px-0">
+              <div class="c-btn js-anim u-fadein-up">fadein-up</div>
+            </div>
+            <pre
+              class="p-code"
+            ><code class="html">&lt;div class=&quot;c-btn js-anim u-fadein-up&quot;&gt;fadein-up&lt;/div&gt;</code></pre>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="p-copy">&copy;copyright</div>
+      </div>
+    </footer>
+
+    <div class="c-floating js-floating">
+      <a href="#" class="">
+        <div class="c-icon-arrow-top p-icon-arrow-top"><span></span></div>
+      </a>
+    </div>
+
+    <div class="c-loading">
+      <div class="c-loading__content">loading...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../src/lib/stickyfill/stickyfill.min-var=2.0.5.js"></script>
+    <script src="../src/lib/intersection-observer/intersection-observer.js"></script>
+    <script src="../src/lib/highlight/highlight.pack.js"></script>
+    <script src="../src/js/script-var=1.0.0.js"></script>
+    <script src="../src/js/my-var=1.0.0.js"></script>
+  </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Layout｜CSSParts</title>
+    <meta
+      name="description"
+      content="HTMLコーディングを効率化するテンプレート"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/lib/highlight/tomorrow-night-eighties.css"
+    />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link
+      rel="icon"
+      href="https://haniwaman.com/template/src/img/common/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <header class="p-header l-header">
+      <div class="l-inner">
+        <div class="l-row l-row--middle">
+          <div class="e-logo u-mr-auto">
+            <a href="../index.html">CSSParts</a>
+          </div>
+          <!-- /e-logo -->
+          <nav class="e-nav">
+            <ul class="c-navigation">
+              <li><a href="index.html">Layout</a></li>
+              <li><a href="../component/index.html">Component</a></li>
+              <li><a href="../utility/index.html">Utility</a></li>
+              <li><a href="../javascript/index.html">JavaScript</a></li>
+            </ul>
+          </nav>
+          <!-- /e-nav -->
+          <nav class="e-drawer">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer-header"
+                data-target="for-drawer-header"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div class="c-drawer__close js-drawer for-drawer-header"></div>
+              <div class="c-drawer__content for-drawer-header">
+                <ul class="c-list">
+                  <li><a href="../foundation/index.html">Foundation</a></li>
+                  <li><a href="index.html">Layout</a></li>
+                  <li><a href="../component/index.html">Component</a></li>
+                  <li><a href="../project/index.html">Project</a></li>
+                  <li><a href="../utility/index.html">Utility</a></li>
+                  <li><a href="../setting/index.html">Setting</a></li>
+                  <li><a href="../external/index.html">External</a></li>
+                  <li><a href="../javascript/index.html">JavaScript</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- /e-drawer -->
+        </div>
+        <!-- /l-row -->
+      </div>
+      <!-- /l-inner -->
+    </header>
+    <!-- /l-header -->
+
+    <div class="c-mainvisual">
+      <div class="c-mainvisual__content">
+        <div class="c-mainvisual__title">Layout</div>
+        <div class="c-mainvisual__lead">
+          ヘッダーやフッターなど大枠のレイアウトに関する定義。装飾はなく枠だけを用意しているイメージ。
+        </div>
+      </div>
+    </div>
+
+    <main class="p-content">
+      <div class="l-inner">
+        <section class="p-component">
+          <h2 class="e-title-block">.l-header</h2>
+          <p class="e-introduction">ヘッダー部分のレイアウト。</p>
+          <div class="p-preview e-preview">
+            <div class="l-header">ヘッダーのコンテンツ</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-header&quot;&gt;
+	ヘッダーのコンテンツ
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-modify">.l-header--fixed</h3>
+          <p class="e-introduction">
+            ヘッダー部分を
+            <code>position:fixed</code>
+            で固定します。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-header">ヘッダーのコンテンツ</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;header class=&quot;l-header l-header--fixed&quot;&gt;
+	ヘッダーのコンテンツ
+&lt;/header&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.l-footer</h2>
+          <p class="e-introduction">フッター部分のレイアウト。</p>
+          <div class="p-preview e-preview">
+            <div class="l-footer">
+              Copyright &copy; hoge All Rights Reserved.
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;footer class=&quot;l-footer&quot;&gt;
+	Copyright &amp;copy; hoge All Rights Reserved.
+&lt;/footer&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.l-inner</h2>
+          <p class="e-introduction">サイトのインナー部分のレイアウト。</p>
+          <div class="p-preview e-preview">
+            <div class="l-inner">コンテンツのインナー部分</div>
+          </div>
+          <pre class="p-code"><code class="html">&lt;footer&gt;
+	&lt;div class=&quot;l-inner&quot;&gt;
+		コンテンツのインナー部分
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+          <h3 id="a-l-inner-wide" class="e-title-block">.l-inner--wide</h3>
+          <p class="e-introduction">サイトのインナー部分を広げたレイアウト。</p>
+          <div class="p-preview e-preview">
+            <div class="l-inner l-inner--wide">コンテンツのインナー部分</div>
+          </div>
+          <pre class="p-code"><code class="html">&lt;footer&gt;
+	&lt;div class=&quot;l-inner l-inner--wide&quot;&gt;
+		コンテンツのインナー部分
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+
+          <h3 id="a-l-inner-narrow" class="e-title-block">.l-inner--narrow</h3>
+          <p class="e-introduction">サイトのインナー部分を狭めたレイアウト。</p>
+          <div class="p-preview e-preview">
+            <div class="l-inner l-inner--narrow">コンテンツのインナー部分</div>
+          </div>
+          <pre class="p-code"><code class="html">&lt;footer&gt;
+	&lt;div class=&quot;l-inner l-inner--narrow&quot;&gt;
+		コンテンツのインナー部分
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+
+          <h3 id="a-l-inner-full" class="e-title-block">.l-inner--full</h3>
+          <p class="e-introduction">
+            サイトのインナー部分を幅いっぱいに広げたレイアウト。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-inner l-inner--full">コンテンツのインナー部分</div>
+          </div>
+          <pre class="p-code"><code class="html">&lt;footer&gt;
+	&lt;div class=&quot;l-inner l-inner--full&quot;&gt;
+		コンテンツのインナー部分
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+
+          <h3 id="a-l-window-full" class="e-title-block">.l-window-full</h3>
+          <p class="e-introduction">
+            サイトのインナー部分をウインドウ幅いっぱいに広げたレイアウト。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full">コンテンツのインナー部分</div>
+          </div>
+          <pre class="p-code"><code class="html">&lt;footer&gt;
+	&lt;div class=&quot;l-window-full&quot;&gt;
+		コンテンツのインナー部分
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+
+          <h3 id="a-l-window-right" class="e-title-block">.l-window-right</h3>
+          <p class="e-introduction">
+            サイトのインナー部分を右側のみウインドウ幅いっぱいに広げたレイアウト。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-window-right u-text-right">
+              コンテンツのインナー部分
+            </div>
+          </div>
+          <pre class="p-code"><code class="html">&lt;footer&gt;
+	&lt;div class=&quot;l-window-right u-text-right&quot;&gt;
+		コンテンツのインナー部分
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+
+          <h3 id="a-l-window-left" class="e-title-block">.l-window-left</h3>
+          <p class="e-introduction">
+            サイトのインナー部分を左側のみウインドウ幅いっぱいに広げたレイアウト。
+          </p>
+
+          <div class="p-preview e-preview">
+            <div class="l-window-left">コンテンツのインナー部分</div>
+          </div>
+          <pre class="p-code"><code class="html">&lt;footer&gt;
+	&lt;div class=&quot;l-window-left&quot;&gt;
+		コンテンツのインナー部分
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.l-section</h2>
+          <p class="e-introduction">
+            <code>section</code>
+            のレイアウト。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-section">セクションのコンテンツ</div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;section class=&quot;l-section&quot;&gt;
+	セクションのコンテンツ
+&lt;/section&gt;</code></pre>
+
+          <h3 class="e-title-modify">.l-section--sticky</h3>
+          <p class="e-introduction">
+            <code>section</code>
+            が重なり合うようにスクロールされます。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-section l-section--sticky">
+              セクションのコンテンツ
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;section class=&quot;l-section l-section--sticky&quot;&gt;
+	セクションのコンテンツ
+&lt;/section&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-l-row" class="e-title-block">.l-row</h2>
+          <p class="e-introduction">
+            <code>display: flex</code>
+            での横並び。横並びのアイテムを
+            <code>l-row</code>
+            で囲みます。小要素の数字を合計していき12を超えたら改行されるような仕組みです。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-row">
+              <div class="l-row__col l-row__col04">col04</div>
+              <div class="l-row__col l-row__col04">col04</div>
+              <div class="l-row__col l-row__col04">col04</div>
+              <div class="l-row__col l-row__col04">col04</div>
+              <div class="l-row__col l-row__col04">col04</div>
+              <div class="l-row__col l-row__col04">col04</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row&quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;col04&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;col04&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;col04&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;col04&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;col04&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;col04&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-block">.l-row--middle</h3>
+          <p class="e-introduction">上下中央に揃える</p>
+          <div class="p-preview e-preview">
+            <div class="l-row l-row--middle">
+              <div class="l-row__col l-row__col04">HTMLの1番目</div>
+              <div class="l-row__col l-row__col04">
+                HTMLの2番目を
+                <br />
+                改行して高さを出す
+              </div>
+              <div class="l-row__col l-row__col04">HTMLの3番目</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row l-row--middle&quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;HTMLの1番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;HTMLの2番目を&lt;br&gt;改行して高さを出す&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;HTMLの3番目&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-block">.l-row--center</h3>
+          <p class="e-introduction">左右中央に揃える</p>
+          <div class="p-preview e-preview">
+            <div class="l-row l-row--center">
+              <div class="l-row__col l-row__col04">HTMLの1番目</div>
+              <div class="l-row__col l-row__col04">HTMLの2番目</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row l-row--center&quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;HTMLの1番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;HTMLの2番目&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-block">.l-row--reverse</h3>
+          <p class="e-introduction">アイテムの並び順を反転します</p>
+          <div class="p-preview e-preview">
+            <div class="l-row l-row--reverse">
+              <div class="l-row__col l-row__col06">HTMLの1番目</div>
+              <div class="l-row__col l-row__col06">HTMLの2番目</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row l-row--reverse &quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col06&quot;&gt;HTMLの1番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col06&quot;&gt;HTMLの2番目&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-block">.l-row--padding</h3>
+          <p class="e-introduction">アイテムに余白を与えます</p>
+          <div class="p-preview e-preview">
+            <div class="l-row l-row--padding">
+              <div class="l-row__col l-row__col02">HTMLの1番目</div>
+              <div class="l-row__col l-row__col02">HTMLの2番目</div>
+              <div class="l-row__col l-row__col02">HTMLの3番目</div>
+              <div class="l-row__col l-row__col02">HTMLの4番目</div>
+              <div class="l-row__col l-row__col02">HTMLの5番目</div>
+              <div class="l-row__col l-row__col02">HTMLの6番目</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row l-row--padding&quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col02&quot;&gt;HTMLの1番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col02&quot;&gt;HTMLの2番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col02&quot;&gt;HTMLの3番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col02&quot;&gt;HTMLの4番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col02&quot;&gt;HTMLの5番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col02&quot;&gt;HTMLの6番目&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-block">.l-row__col</h3>
+          <p class="e-introduction">
+            <code>l-row</code>
+            の子要素として横並びの幅を指定するために必要不可欠な要素。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-row l-row--center">
+              <div class="l-row__col l-row__col04">HTMLの1番目</div>
+              <div class="l-row__col l-row__col04">HTMLの2番目</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row l-row--center&quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;HTMLの1番目&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;HTMLの2番目&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-block">.l-row__col[数字]</h3>
+          <p class="e-introduction">
+            数字の部分に12を何等分するか指定する。数字は01〜12まで指定できます。例えば、04を指定すると、4/12*100%=33.3%として幅を持たせることになります。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-row l-row--center">
+              <div class="l-row__col l-row__col04">33.3%分の幅の子要素</div>
+              <div class="l-row__col l-row__col08">66.6%分の幅の子要素</div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row l-row--center&quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col04&quot;&gt;33.3%分の幅の子要素&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col08&quot;&gt;66.6%分の幅の子要素&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-block">.l-row__col[数字]-tab</h3>
+          <p class="e-introduction">
+            <code>-tab</code>
+            を追加することでタブレット時用の幅を持たせることが可能です。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-row l-row--center">
+              <div class="l-row__col l-row__col12 l-row__col04-tab">
+                スマホ時は100%、タブレット時は33.3%分の幅の子要素
+              </div>
+              <div class="l-row__col l-row__col12 l-row__col08-tab">
+                スマホ時は100%、タブレット時は66.6%分の幅の子要素
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row l-row--center&quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col12 l-row__col04-tab&quot;&gt;スマホ時は100%、タブレット時は33.3%分の幅の子要素&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col12 l-row__col08-tab&quot;&gt;スマホ時は100%、タブレット時は66.6%分の幅の子要素&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <h3 class="e-title-block">.l-row__col[数字]-pc</h3>
+          <p class="e-introduction">
+            <code>-pc</code>
+            を追加することでPC時用の幅を持たせることが可能です。
+          </p>
+          <div class="p-preview e-preview">
+            <div class="l-row l-row--center">
+              <div
+                class="l-row__col l-row__col12 l-row__col04-tab l-row__col08-pc"
+              >
+                スマホ時は100%、タブレット時は33.3%、PC時は66.6%分の幅の子要素
+              </div>
+              <div
+                class="l-row__col l-row__col12 l-row__col08-tab l-row__col04-pc"
+              >
+                スマホ時は100%、タブレット時は66.6%、PC時は33.3%分の幅の子要素
+              </div>
+            </div>
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;l-row l-row--center&quot;&gt;
+	&lt;div class=&quot;l-row__col l-row__col12 l-row__col04-tab l-row__col08-pc&quot;&gt;スマホ時は100%、タブレット時は33.3%、PC時は66.6%分の幅の子要素素&lt;/div&gt;
+	&lt;div class=&quot;l-row__col l-row__col12 l-row__col08-tab l-row__col04-pc&quot;&gt;スマホ時は100%、タブレット時は66.6%、PC時は33.3%分の幅の子要素&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="p-copy">&copy;copyright</div>
+      </div>
+    </footer>
+
+    <div class="c-floating js-floating">
+      <a href="index.html#" class="">
+        <div class="c-icon-arrow-top"><span></span></div>
+      </a>
+    </div>
+
+    <div class="c-loading">
+      <div class="c-loading__content">loading...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../src/lib/stickyfill/stickyfill.min-var=2.0.5.js"></script>
+    <script src="../src/lib/intersection-observer/intersection-observer.js"></script>
+    <script src="../src/lib/highlight/highlight.pack.js"></script>
+    <script src="../src/js/script-var=1.0.0.js"></script>
+    <script src="../src/js/my-var=1.0.0.js"></script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project｜CSSParts</title>
+    <meta
+      name="description"
+      content="HTMLコーディングを効率化するテンプレート"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/lib/highlight/tomorrow-night-eighties.css"
+    />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link
+      rel="icon"
+      href="https://haniwaman.com/template/src/img/common/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <header class="p-header l-header">
+      <div class="l-inner">
+        <div class="l-row l-row--middle">
+          <div class="e-logo u-mr-auto">
+            <a href="../index.html">CSSParts</a>
+          </div>
+          <!-- /e-logo -->
+          <nav class="e-nav">
+            <ul class="c-navigation">
+              <li><a href="../layout/index.html">Layout</a></li>
+              <li><a href="../component/index.html">Component</a></li>
+              <li><a href="../utility/index.html">Utility</a></li>
+              <li><a href="../javascript/index.html">JavaScript</a></li>
+            </ul>
+          </nav>
+          <!-- /e-nav -->
+          <nav class="e-drawer">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer-header"
+                data-target="for-drawer-header"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div class="c-drawer__close js-drawer for-drawer-header"></div>
+              <div class="c-drawer__content for-drawer-header">
+                <ul class="c-list">
+                  <li><a href="../foundation/index.html">Foundation</a></li>
+                  <li><a href="../layout/index.html">Layout</a></li>
+                  <li><a href="../component/index.html">Component</a></li>
+                  <li><a href="index.html">Project</a></li>
+                  <li><a href="../utility/index.html">Utility</a></li>
+                  <li><a href="../setting/index.html">Setting</a></li>
+                  <li><a href="../external/index.html">External</a></li>
+                  <li><a href="../javascript/index.html">JavaScript</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- /e-drawer -->
+        </div>
+        <!-- /l-row -->
+      </div>
+      <!-- /l-inner -->
+    </header>
+    <!-- /l-header -->
+
+    <div class="c-mainvisual">
+      <div class="c-mainvisual__content">
+        <div class="c-mainvisual__title">Project</div>
+        <div class="c-mainvisual__lead">
+          サイト固有のまとまりを定義してパターン化します。案件に応じて追加していくところです。
+        </div>
+      </div>
+    </div>
+
+    <main class="p-main">
+      <div class="l-inner">
+        <section class="p-component">
+          <h2 id="a-role" class="e-title-block">
+            <code>Project</code>
+            の役割
+          </h2>
+          <div class="e-introduction">
+            <p>
+              あらかじめ定義しているものはありません。案件に応じて必要なコンポーネントを追加していってください。
+            </p>
+            <blockquote>
+              プロジェクト固有のパターンであり、いくつかのComponentと、それに該当しない要素によって構成されるものを定義します。
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-animation" class="e-title-block">
+            <code>Project</code>
+            と
+            <code>Component</code>
+          </h2>
+          <div class="e-introduction">
+            <p>
+              <code>Component</code>
+              は案件を超えて使い回せるもの。
+              <code>Project</code>
+              はその案件だけで使えるもの。という認識で良いかと思います。
+              <code>Project</code>
+              から
+              <code>Component</code>
+              を上書きすることはFLOCSSでは許可されています。
+            </p>
+            <blockquote>
+              ProjectレイヤーがComponentレイヤーのモジュールを変更することは許容します。
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="p-component">
+          <h2 id="a-bem" class="e-title-block">命名規則</h2>
+          <div class="e-introduction">
+            <p>
+              命名規則はFLOCSSに準じてもらうとこのCSSテンプレートとの整合性が取りやすいです。
+            </p>
+            <p>
+              <code>Project</code>
+              を示す接頭辞として
+              <code>p-</code>
+              。
+              <code>p-hoge</code>
+              というBlockのElementは
+              <code>p-hoge__element</code>
+              です。そして、Modifierは
+              <code>p-hoge--modifier</code>
+              となります。
+            </p>
+            <blockquote>
+              BEMシステムのシンタックスである、Block、Element、Modifierに分類して構成される規則を採用します。
+              <br />
+              <br />
+              FLOCSSでは、オリジナルのBEMのシンタックスではなく、MindBEMding
+              のアイデアを基本的にそのまま取り入れています。
+              <br />
+              <br />
+              Modifierの命名の派生パターンとして、JavaScriptで操作されるような「状態」を表すようなModifierについては、SMACSSのStateパターンの命名を拝借し、is-*プレフィックスを付与し、.is-activeというようにすることもできます。
+            </blockquote>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="p-copy">&copy;copyright</div>
+      </div>
+    </footer>
+
+    <div class="c-floating js-floating">
+      <a href="#" class="">
+        <div class="c-icon-arrow-top p-icon-arrow-top"><span></span></div>
+      </a>
+    </div>
+
+    <div class="c-loading">
+      <div class="c-loading__content">loading...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../src/lib/stickyfill/stickyfill.min-var=2.0.5.js"></script>
+    <script src="../src/lib/intersection-observer/intersection-observer.js"></script>
+    <script src="../src/lib/highlight/highlight.pack.js"></script>
+    <script src="../src/js/script-var=1.0.0.js"></script>
+    <script src="../src/js/my-var=1.0.0.js"></script>
+  </body>
+</html>

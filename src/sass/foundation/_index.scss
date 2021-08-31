@@ -1,0 +1,8 @@
+@use "../global" as global;
+// @import的にsettingやfunctionで定義した変数を使いたい場合
+@forward "extend";
+@forward "base";
+@forward "attr";
+@forward "animation";
+
+// 読み込んだ後にCSSの記述

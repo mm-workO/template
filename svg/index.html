@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SVG｜CSSParts</title>
+    <meta
+      name="description"
+      content="HTMLコーディングを効率化するテンプレート"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/lib/highlight/tomorrow-night-eighties.css"
+    />
+    <link rel="stylesheet" href="../src/css/style.min-var=1.0.0.css" />
+    <link
+      rel="icon"
+      href="https://haniwaman.com/template/src/img/common/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <header class="p-header l-header">
+      <div class="l-inner">
+        <div class="l-row l-row--middle">
+          <div class="e-logo u-mr-auto">
+            <a href="../index.html">CSSParts</a>
+          </div>
+          <!-- /e-logo -->
+          <nav class="e-nav">
+            <ul class="c-navigation">
+              <li><a href="../layout/index.html">Layout</a></li>
+              <li><a href="../component/index.html">Component</a></li>
+              <li><a href="../utility/index.html">Utility</a></li>
+              <li><a href="../javascript/index.html">JavaScript</a></li>
+            </ul>
+          </nav>
+          <!-- /e-nav -->
+          <nav class="e-drawer">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer-header"
+                data-target="for-drawer-header"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div class="c-drawer__close js-drawer for-drawer-header"></div>
+              <div class="c-drawer__content for-drawer-header">
+                <ul class="c-list">
+                  <li><a href="../foundation/index.html">Foundation</a></li>
+                  <li><a href="../layout/index.html">Layout</a></li>
+                  <li><a href="../component/index.html">Component</a></li>
+                  <li><a href="../project/index.html">Project</a></li>
+                  <li><a href="../utility/index.html">Utility</a></li>
+                  <li><a href="../setting/index.html">Setting</a></li>
+                  <li><a href="../external/index.html">External</a></li>
+                  <li><a href="../javascript/index.html">JavaScript</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- /e-drawer -->
+        </div>
+        <!-- /l-row -->
+      </div>
+      <!-- /l-inner -->
+    </header>
+    <!-- /l-header -->
+
+    <div class="c-mainvisual">
+      <div class="c-mainvisual__content">
+        <div class="c-mainvisual__title">SVG</div>
+        <div class="c-mainvisual__lead">SVGのコーディングパターン</div>
+      </div>
+    </div>
+
+    <main class="p-content">
+      <div class="l-inner">
+        <section class="p-component">
+          <h2 class="e-title-block">skew</h2>
+          <p class="e-introduction">斜めの区切り。</p>
+
+          <h3 class="e-title-modify">skew1</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-skew"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                width="64"
+                height="64"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0 0 L64 64 L64 0 Z" />
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-skew&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot; width=&quot;64&quot; height=&quot;64&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0 0 L64 64 L64 0 Z&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+
+          <h3 class="e-title-modify">skew2</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-skew"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                width="64"
+                height="64"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0 64 L64 64 L0 0 Z" />
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-skew&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot; width=&quot;64&quot; height=&quot;64&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0 64 L64 64 L0 0 Z&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+
+          <h3 class="e-title-modify">skew3</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-skew"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                width="64"
+                height="64"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0 64 L64 0 L0 0 Z" />
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-skew&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot; width=&quot;64&quot; height=&quot;64&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0 64 L64 0 L0 0 Z&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+
+          <h3 class="e-title-modify">skew4</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-skew"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                width="64"
+                height="64"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0 64 L64 64 L64 0 Z" />
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-skew&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot; width=&quot;64&quot; height=&quot;64&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0 64 L64 64 L64 0 Z&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">triangle</h2>
+          <p class="e-introduction">三角の区切り。</p>
+
+          <h3 class="e-title-modify">triangle1</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-triangle"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                width="64"
+                height="64"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0 0 L32 64 L64 0 Z" />
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-triangle&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot; width=&quot;64&quot; height=&quot;64&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0 0 L32 64 L64 0 Z&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+
+          <h3 class="e-title-modify">triangle2</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-triangle"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                width="64"
+                height="64"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0 64 L32 0 L64 64 Z" />
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-triangle&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot; width=&quot;64&quot; height=&quot;64&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0 64 L32 0 L64 64 Z&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">curve</h2>
+          <p class="e-introduction">曲線の区切り。</p>
+
+          <h3 class="e-title-modify">curve</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-curve"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                width="64"
+                height="64"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0 0 L64 0 Q32 128 0 0 Z" />
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-curve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot; width=&quot;64&quot; height=&quot;64&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0 0 L64 0 Q32 128 0 0 Z&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+
+          <h3 class="e-title-modify">curve</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-curve"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                width="64"
+                height="64"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0 64 L64 64 Q32 -64 0 64 Z" />
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-curve&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot; width=&quot;64&quot; height=&quot;64&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0 64 L64 64 Q32 -64 0 64 Z&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">wave</h2>
+          <p class="e-introduction">波の区切り。</p>
+
+          <h3 class="e-title-modify">wave1</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-wave"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0,0 v50 q25,100 50,0 t50,0 v-50 Z"></path>
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-wave&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 100&quot; width=&quot;100&quot; height=&quot;100&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0,0 v50 q25,100 50,0 t50,0 v-50 Z&quot;&gt;&lt;/path&gt;
+&lt;/svg&gt;</code></pre>
+
+          <h3 class="e-title-modify">wave2</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-wave"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path d="M0,0 v50 q25,-100 50,0 t50,0 v-50 Z"></path>
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-wave&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 100&quot; width=&quot;100&quot; height=&quot;100&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0,0 v50 q25,-100 50,0 t50,0 v-50 Z&quot;&gt;&lt;/path&gt;
+&lt;/svg&gt;</code></pre>
+
+          <h3 class="e-title-modify">wave3</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-wave"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path
+                  d="M0,0 v50 q10,100 20,0 t20,0 t20,0 t20,0 t20,0 v-50 Z"
+                ></path>
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-wave&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 100&quot; width=&quot;100&quot; height=&quot;100&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0,0 v50 q10,100 20,0 t20,0 t20,0 t20,0 t20,0 v-50 Z&quot;&gt;&lt;/path&gt;
+&lt;/svg&gt;</code></pre>
+
+          <h3 class="e-title-modify">wave4</h3>
+          <p class="e-introduction"></p>
+          <div class="p-preview e-preview">
+            <div class="l-window-full l-svg-separator">
+              <svg
+                class="svg-wave"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 100"
+                width="100"
+                height="100"
+                preserveAspectRatio="none"
+                fill="#757575"
+              >
+                <path
+                  d="M0,0 v50 q10,-100 20,0 t20,0 t20,0 t20,0 t20,0 v-50 Z"
+                ></path>
+              </svg>
+            </div>
+            <!-- /l-window-full -->
+          </div>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;svg class=&quot;svg-wave&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 100&quot; width=&quot;100&quot; height=&quot;100&quot; preserveAspectRatio=&quot;none&quot; fill=&quot;#757575&quot;&gt;
+	&lt;path d=&quot;M0,0 v50 q10,-100 20,0 t20,0 t20,0 t20,0 t20,0 v-50 Z&quot;&gt;&lt;/path&gt;
+&lt;/svg&gt;</code></pre>
+        </section>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="p-copy">&copy;copyright</div>
+      </div>
+    </footer>
+
+    <div class="c-floating js-floating">
+      <a href="index.html#" class="">
+        <div class="c-icon-arrow-top"><span></span></div>
+      </a>
+    </div>
+
+    <div class="c-loading">
+      <div class="c-loading__content">loading...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../src/lib/stickyfill/stickyfill.min-var=2.0.5.js"></script>
+    <script src="../src/lib/intersection-observer/intersection-observer.js"></script>
+    <script src="../src/lib/highlight/highlight.pack.js"></script>
+    <script src="../src/js/script-var=1.0.0.js"></script>
+    <script src="../src/js/my-var=1.0.0.js"></script>
+  </body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript｜CSSParts</title>
+    <meta
+      name="description"
+      content="HTMLコーディングを効率化するテンプレート"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/lib/highlight/tomorrow-night-eighties.css"
+    />
+    <link rel="stylesheet" href="../src/css/style.min-var=1.0.0.css" />
+    <link
+      rel="icon"
+      href="https://haniwaman.com/template/src/img/common/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <header class="p-header l-header">
+      <div class="l-inner">
+        <div class="l-row l-row--middle">
+          <div class="e-logo u-mr-auto">
+            <a href="../index.html">CSSParts</a>
+          </div>
+          <!-- /e-logo -->
+          <nav class="e-nav">
+            <ul class="c-navigation">
+              <li><a href="../layout/index.html">Layout</a></li>
+              <li><a href="../component/index.html">Component</a></li>
+              <li><a href="../utility/index.html">Utility</a></li>
+              <li><a href="index.html">JavaScript</a></li>
+            </ul>
+          </nav>
+          <!-- /e-nav -->
+          <nav class="e-drawer">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer-header"
+                data-target="for-drawer-header"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div class="c-drawer__close js-drawer for-drawer-header"></div>
+              <div class="c-drawer__content for-drawer-header">
+                <ul class="c-list">
+                  <li><a href="../foundation/index.html">Foundation</a></li>
+                  <li><a href="../layout/index.html">Layout</a></li>
+                  <li><a href="../component/index.html">Component</a></li>
+                  <li><a href="../project/index.html">Project</a></li>
+                  <li><a href="../utility/index.html">Utility</a></li>
+                  <li><a href="../setting/index.html">Setting</a></li>
+                  <li><a href="../external/index.html">External</a></li>
+                  <li><a href="index.html">JavaScript</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- /e-drawer -->
+        </div>
+        <!-- /l-row -->
+      </div>
+      <!-- /l-inner -->
+    </header>
+    <!-- /l-header -->
+
+    <div class="c-mainvisual">
+      <div class="c-mainvisual__content">
+        <div class="c-mainvisual__title">JavaScript</div>
+        <div class="c-mainvisual__lead">
+          JavaScriptに連動して動きが決まっているパーツもあります。
+        </div>
+      </div>
+    </div>
+
+    <main class="p-content">
+      <div class="l-inner">
+        <section class="p-component">
+          <h2 class="e-title-block">data-scroll</h2>
+          <p class="e-introduction">
+            スクロールされたら
+            <code>body</code>
+            タグに
+            <code>data-scroll="true"</code>
+            が設定されます。
+            <code>.js-mv</code>
+            が存在する場合は、そこのクラスの領域を超えたタイミングでスクロール判定となります。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">jQuery(window).on('scroll', function() {
+	let length = 100;
+	if (jQuery('.js-mv').length) {
+		length = jQuery('.js-mv').innerHeight();
+	}
+	if (length &lt; jQuery(this).scrollTop()) {
+		jQuery('body').attr('data-scroll', 'true');
+	} else {
+		jQuery('body').attr('data-scroll', 'false');
+	}
+});</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">data-loading</h2>
+          <p class="e-introduction">
+            画面が読み込まれたら
+            <code>body</code>
+            タグに
+            <code>data-loading="true"</code>
+            が設定されます。読み込みが終わらなくても3秒後には解除されます。
+          </p>
+          <pre class="p-code"><code class="js">jQuery(&quot;body&quot;)
+	.delay(3000)
+	.queue(function() {
+		jQuery(this)
+			.attr(&quot;data-loading&quot;, &quot;true&quot;)
+			.dequeue();
+	});
+jQuery(window).on(&quot;load&quot;, function() {
+	jQuery(&quot;body&quot;).attr(&quot;data-loading&quot;, &quot;true&quot;);
+});</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-loading&quot;&gt;
+	&lt;div class=&quot;c-loading__content&quot;&gt;loading...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.js-file</h2>
+          <p class="e-introduction">
+            ファイルが読み込まれると
+            <code>.c-file__result</code>
+            に結果（ファイル名）が表示されます。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">jQuery(&quot;.js-file&quot;).change(function() {
+	jQuery(this)
+		.siblings(&quot;.c-file__result&quot;)
+		.show();
+	jQuery(this)
+		.siblings(&quot;.c-file__result&quot;)
+		.text(jQuery(this).val());
+});</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-file&quot;&gt;
+	&lt;label class=&quot;c-file__label&quot; for=&quot;your-file&quot;&gt;ファイル添付&lt;/label&gt;
+	&lt;input type=&quot;file&quot; name=&quot;your-file&quot; id=&quot;your-file&quot; class=&quot;c-file__input js-file&quot; /&gt;
+	&lt;span class=&quot;c-file__result&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.js-drawer</h2>
+          <p class="e-introduction">
+            <code>.js-drawer</code>
+            がクリックされると
+            <code>data-target</code>
+            属性で指定したクラスに
+            <code>.is-checked</code>
+            が付与されます。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">jQuery(&quot;.js-drawer&quot;).on(&quot;click&quot;, function(e) {
+	e.preventDefault();
+	let targetClass = jQuery(this).attr(&quot;data-target&quot;);
+	jQuery(&quot;.&quot; + targetClass).toggleClass(&quot;is-checked&quot;);
+	return false;
+});</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-drawer&quot;&gt;
+	&lt;div class=&quot;c-drawer__icon js-drawer for-drawer01&quot; data-target=&quot;for-drawer01&quot;&gt;
+		&lt;div class=&quot;c-drawer__bars&quot;&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-drawer__close js-drawer for-drawer01&quot; data-target=&quot;for-drawer01&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;c-drawer__content for-drawer01&quot;&gt;コンテンツ部分&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.js-drawer-close</h2>
+          <p class="e-introduction">
+            <code>.js-drawer-close</code>
+            内の
+            <code>a</code>
+            要素がクリックされるとドロワーが閉じます。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">jQuery(&quot;.js-drawer-close a&quot;).on(&quot;click&quot;, function(e) {
+	e.preventDefault();
+	jQuery(this)
+		.parents(&quot;.js-drawer-close&quot;)
+		.parent()
+		.toggleClass(&quot;is-checked&quot;);
+	return false;
+});</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-drawer&quot;&gt;
+	&lt;div class=&quot;c-drawer__icon js-drawer&quot;&gt;
+		&lt;div class=&quot;c-drawer__bars&quot;&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;c-drawer__bar&quot;&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-drawer__close js-drawer&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;c-drawer__content js-drawer-close&quot;&gt;コンテンツ部分&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.js-modal</h2>
+          <p class="e-introduction">
+            <code>.js-modal</code>
+            がクリックされると、
+            <code>data-target</code>
+            に指定したコンテンツに
+            <code>.is-checked</code>
+            が付与されます。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">jQuery(&quot;.js-modal&quot;).on(&quot;click&quot;, function(e) {
+	e.preventDefault();
+	let target = jQuery(this).attr(&quot;data-target&quot;);
+	jQuery(&quot;#&quot; + target).toggleClass(&quot;is-checked&quot;);
+	return false;
+});</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;a href=&quot;&quot; class=&quot;c-btn js-modal&quot; data-target=&quot;for-modal&quot;&gt;モーダルを開く&lt;/a&gt;
+&lt;div id=&quot;for-modal&quot; class=&quot;c-modal&quot;&gt;
+	&lt;div class=&quot;c-modal__content&quot;&gt;
+		&lt;p&gt;モーダルのコンテンツ&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;c-modal__close js-modal&quot; data-target=&quot;for-modal&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.js-accordion</h2>
+          <p class="e-introduction">
+            <code>.js-accordion</code>
+            がクリックされると、自身に
+            <code>.is-checked</code>
+            が付与されて
+            <code>.js-accordion-content</code>
+            の表示/非表示が切り替わります。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">jQuery(&quot;.js-accordion&quot;).on(&quot;click&quot;, function(e) {
+	e.preventDefault();
+	jQuery(this)
+		.siblings(&quot;.js-accordion-content&quot;)
+		.slideToggle(500);
+	jQuery(this)
+		.parent(&quot;.c-accordion&quot;)
+		.toggleClass(&quot;is-checked&quot;);
+	return false;
+});</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-accordion&quot;&gt;
+	&lt;div class=&quot;c-accordion__title js-accordion&quot;&gt;タイトル&lt;/div&gt;
+	&lt;div class=&quot;c-accordion__content js-accordion-content&quot;&gt;
+		コンテンツ部分
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">.js-tab</h2>
+          <p class="e-introduction">
+            <code>.js-tab</code>
+            がクリックされると、
+            <code>.is-checked</code>
+            の切り替えと、
+            <code>data-target</code>
+            に指定したコンテンツを表示します。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">jQuery(&quot;.js-tab&quot;).on(&quot;click&quot;, function(e) {
+	e.preventDefault();
+	jQuery(this)
+		.parent()
+		.children()
+		.removeClass(&quot;is-checked&quot;);
+	jQuery(this).addClass(&quot;is-checked&quot;);
+	let target = jQuery(this).attr(&quot;data-target&quot;);
+	jQuery(&quot;#&quot; + target)
+		.parent()
+		.children()
+		.removeClass(&quot;is-checked&quot;);
+	jQuery(&quot;#&quot; + target).addClass(&quot;is-checked&quot;);
+	return false;
+});</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;c-tab&quot;&gt;
+	&lt;nav class=&quot;c-tab__nav&quot;&gt;
+		&lt;div class=&quot;c-tab__item js-tab is-checked&quot; data-target=&quot;for-tab1&quot;&gt;タブ1&lt;/div&gt;
+		&lt;div class=&quot;c-tab__item js-tab&quot; data-target=&quot;for-tab2&quot;&gt;タブ2&lt;/div&gt;
+		&lt;div class=&quot;c-tab__item js-tab&quot; data-target=&quot;for-tab3&quot;&gt;タブ3&lt;/div&gt;
+	&lt;/nav&gt;
+	&lt;div class=&quot;c-tab__contents&quot;&gt;
+		&lt;div id=&quot;for-tab1&quot; class=&quot;c-tab__content is-checked&quot;&gt;
+			タブ1のコンテンツ
+		&lt;/div&gt;
+		&lt;div id=&quot;for-tab2&quot; class=&quot;c-tab__content&quot;&gt;
+			タブ2のコンテンツ
+		&lt;/div&gt;
+		&lt;div id=&quot;for-tab3&quot; class=&quot;c-tab__content&quot;&gt;
+			タブ3のコンテンツ
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">スムーススクロール</h2>
+          <p class="e-introduction">
+            ページ内リンクをクリックされた時に
+            <code>300</code>
+            のスピードで移動します。固定ヘッダーがある場合は、
+            <code>.l-header</code>
+            の分の高さが考慮されます。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">jQuery(&#39;a[href^=&quot;#&quot;]&#39;).click(function() {
+	let header = jQuery(&quot;.l-header&quot;).height();
+	let speed = 300;
+	let id = jQuery(this).attr(&quot;href&quot;);
+	let target = jQuery(&quot;#&quot; == id ? &quot;html&quot; : id);
+	let position = jQuery(target).offset().top - header;
+	if (&quot;fixed&quot; !== jQuery(&quot;.l-header&quot;).css(&quot;position&quot;)) {
+		position = jQuery(target).offset().top;
+	}
+	if (0 &gt; position) {
+		position = 0;
+	}
+	jQuery(&quot;html, body&quot;).animate(
+		{
+			scrollTop: position
+		},
+		speed
+	);
+	return false;
+});</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block js-anim u-fadein-up">パララックス</h2>
+          <p class="e-introduction">
+            画面に登場した時に
+            <code>.js-anim</code>
+            が指定されたコンテンツに
+            <code>.is-anim</code>
+            クラスを付与します。
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">const parallaxOptions = { root: null, rootMargin: &quot;0px&quot;, threshold: [0.25] };
+var parallaxItems = [].slice.call(document.querySelectorAll(&quot;.js-anim&quot;));
+let parallaxItemObserver = new IntersectionObserver(function(entries, observer) {
+	entries.forEach(function(entry) {
+		if (entry.isIntersecting) {
+			let parallaxItem = entry.target;
+			parallaxItem.classList.add(&quot;is-anim&quot;);
+			parallaxItemObserver.unobserve(parallaxItem);
+		}
+	});
+}, parallaxOptions);
+
+parallaxItems.forEach(function(parallaxItem) {
+	parallaxItemObserver.observe(parallaxItem);
+});</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;div class=&quot;js-anim u-fadein-up&quot;&gt;FadeIn UP&lt;/div&gt;
+</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">スマホのみ電話リンク</h2>
+          <p class="e-introduction">スマホ時のみ電話リンクにします。</p>
+          <pre class="p-code"><code class="js">let ua = navigator.userAgent;
+if (ua.indexOf(&quot;iPhone&quot;) &lt; 0 &amp;&amp; ua.indexOf(&quot;Android&quot;) &lt; 0) {
+	jQuery(&#39;a[href^=&quot;tel:&quot;]&#39;)
+		.css(&quot;cursor&quot;, &quot;default&quot;)
+		.on(&quot;click&quot;, function(e) {
+			e.preventDefault();
+		});
+}</code></pre>
+          <p class="e-example">使用例</p>
+          <pre
+            class="p-code"
+          ><code class="html">&lt;a href=&quot;tel:00000000000&quot;&gt;000-0000-0000&lt;/a&gt;
+</code></pre>
+        </section>
+
+        <section class="p-component">
+          <h2 class="e-title-block">LazyLoad</h2>
+          <p class="e-introduction">
+            表示エリアに入ったら画像を読み込みます。Google推奨の
+            <code>IntersectionObserver</code>
+            を使用した方法を取り入れました。（
+            <a
+              href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/?hl=ja"
+              target="_blank"
+            >
+              https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/?hl=ja
+            </a>
+            ）
+          </p>
+          <pre
+            class="p-code"
+          ><code class="js">const lazyOptions = { root: null, rootMargin: &quot;0px&quot;, threshold: [0] };
+var lazyItems = [].slice.call(document.querySelectorAll(&quot;.js-lazy&quot;));
+lazyItems.forEach(function(lazyItem) {
+	lazyItem.setAttribute(&quot;data-src&quot;, lazyItem.src);
+	lazyItem.src = &quot;&quot;;
+});
+let lazyItemObserver = new IntersectionObserver(function(entries, observer) {
+	entries.forEach(function(entry) {
+		if (entry.isIntersecting) {
+			let lazyItem = entry.target;
+			if (lazyItem.dataset.hasOwnProperty(&quot;src&quot;)) {
+				lazyItem.src = lazyItem.dataset.src;
+			}
+			if (lazyItem.dataset.hasOwnProperty(&quot;srcset&quot;)) {
+				lazyItem.srcset = lazyItem.dataset.srcset;
+			}
+			lazyItem.classList.remove(&quot;js-lazy&quot;);
+			lazyItemObserver.unobserve(lazyItem);
+		}
+	});
+}, lazyOptions);
+
+lazyItems.forEach(function(lazyItem) {
+	lazyItemObserver.observe(lazyItem);
+});</code></pre>
+        </section>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="p-copy">&copy;copyright</div>
+      </div>
+    </footer>
+
+    <div class="c-floating js-floating">
+      <a href="index.html#" class="">
+        <div class="c-icon-arrow-top"><span></span></div>
+      </a>
+    </div>
+
+    <div class="c-loading">
+      <div class="c-loading__content">loading...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../src/lib/stickyfill/stickyfill.min-var=2.0.5.js"></script>
+    <script src="../src/lib/intersection-observer/intersection-observer.js"></script>
+    <script src="../src/lib/highlight/highlight.pack.js"></script>
+    <script src="../src/js/script-var=1.0.0.js"></script>
+    <script src="../src/js/my-var=1.0.0.js"></script>
+  </body>
+</html>

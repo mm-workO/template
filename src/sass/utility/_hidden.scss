@@ -1,0 +1,21 @@
+@use "../global" as global;
+// PC
+.u-hidden-pc {
+  @include global.mq-up("pc") {
+    display: none;
+  }
+}
+
+// タブレット
+.u-hidden-tab {
+  @include global.mq-up("tab-only") {
+    display: none;
+  }
+}
+
+// スマホ
+.u-hidden-sp {
+  @include global.mq-up("sp") {
+    display: none;
+  }
+}

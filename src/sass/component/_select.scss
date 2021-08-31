@@ -1,0 +1,9 @@
+@use "../foundation/extend";
+
+.c-select {
+  @extend %select;
+}
+
+.c-select--full {
+  width: 100%;
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSSParts｜HTMLコーディングを効率化するCSSテンプレート</title>
+    <meta
+      name="description"
+      content="HTMLコーディングを効率化するCSSテンプレート"
+    />
+    <link
+      rel="stylesheet"
+      href="src/lib/highlight/tomorrow-night-eighties.css"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link
+      rel="icon"
+      href="https://haniwaman.com/template/src/img/common/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <header class="p-header l-header">
+      <div class="l-inner">
+        <div class="l-row l-row--middle">
+          <div class="e-logo u-mr-auto"><a href="index.html">CSSParts</a></div>
+          <!-- /e-logo -->
+          <nav class="e-nav">
+            <ul class="c-navigation">
+              <li><a href="layout/index.html">Layout</a></li>
+              <li><a href="component/index.html">Component</a></li>
+              <li><a href="utility/index.html">Utility</a></li>
+              <li><a href="javascript/index.html">JavaScript</a></li>
+            </ul>
+          </nav>
+          <!-- /e-nav -->
+          <nav class="e-drawer">
+            <div class="c-drawer">
+              <div
+                class="c-drawer__icon js-drawer for-drawer-header"
+                data-target="for-drawer-header"
+              >
+                <div class="c-drawer__bars">
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                  <span class="c-drawer__bar"></span>
+                </div>
+              </div>
+              <div class="c-drawer__close js-drawer for-drawer-header"></div>
+              <div class="c-drawer__content for-drawer-header">
+                <ul class="c-list">
+                  <li><a href="foundation/index.html">Foundation</a></li>
+                  <li><a href="layout/index.html">Layout</a></li>
+                  <li><a href="component/index.html">Component</a></li>
+                  <li><a href="project/index.html">Project</a></li>
+                  <li><a href="utility/index.html">Utility</a></li>
+                  <li><a href="setting/index.html">Setting</a></li>
+                  <li><a href="external/index.html">External</a></li>
+                  <li><a href="javascript/index.html">JavaScript</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- /e-drawer -->
+        </div>
+        <!-- /l-row -->
+      </div>
+      <!-- /l-inner -->
+    </header>
+    <!-- /l-header -->
+
+    <div class="p-mainvisual c-mainvisual c-mainvisual--hero">
+      <div class="c-mainvisual__content">
+        <div class="c-mainvisual__title e-title">
+          コーディングを効率化する
+          <br class="u-hidden-pc" />
+          CSSテンプレート
+        </div>
+        <div class="e-btn">
+          <a
+            class="c-btn c-btn--big c-btn--shadow u-hover-scale"
+            href="https://github.com/haniwaman/parts"
+            target="_blank"
+          >
+            ダウンロード
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- /c-mainvisual -->
+
+    <main class="p-main">
+      <div class="l-section p-about">
+        <div class="l-inner">
+          <div class="c-section-head">
+            <div class="c-section-title">特徴</div>
+            <div class="c-section-lead">English</div>
+          </div>
+          <!-- /c-section-head -->
+
+          <div class="l-row l-row--padding">
+            <div class="l-row__col l-row__col12 l-row__col04-tab">
+              <div class="p-about-item">
+                <div class="e-title">特徴1</div>
+                <div class="e-img">
+                  <img src="src/img/cat.jpg" alt="" width="200" />
+                </div>
+                <div class="e-excerpt">
+                  こういう特徴があります。こういう特徴があります。こういう特徴があります。こういう特徴があります。こういう特徴があります。
+                </div>
+              </div>
+            </div>
+            <div class="l-row__col l-row__col12 l-row__col04-tab">
+              <div class="p-about-item">
+                <div class="e-title">特徴2</div>
+                <div class="e-img">
+                  <img src="src/img/cat.jpg" alt="" width="200" />
+                </div>
+                <div class="e-excerpt">
+                  こういう特徴があります。こういう特徴があります。こういう特徴があります。こういう特徴があります。こういう特徴があります。
+                </div>
+              </div>
+            </div>
+            <div class="l-row__col l-row__col12 l-row__col04-tab">
+              <div class="p-about-item">
+                <div class="e-title">特徴3</div>
+                <div class="e-img">
+                  <img src="src/img/cat.jpg" alt="" width="200" />
+                </div>
+                <div class="e-excerpt">
+                  こういう特徴があります。こういう特徴があります。こういう特徴があります。こういう特徴があります。こういう特徴があります。
+                </div>
+              </div>
+              <!-- /p-about-item -->
+            </div>
+          </div>
+        </div>
+        <!-- /l-inner -->
+      </div>
+      <!-- /l-section -->
+
+      <!-- p-flocss -->
+      <section class="l-section p-flocss">
+        <div class="l-inner">
+          <div class="c-section-head">
+            <h2 class="c-section-title">実務的なCSS</h2>
+            <div class="c-section-lead">FLOCSS</div>
+          </div>
+          <!-- /c-section-head -->
+
+          <div class="e-lead">
+            <a href="https://github.com/hiloki/flocss" target="_blank">
+              FLOCSS
+            </a>
+            をベースとしてCSSを設計しています。実務で使う実践的なパーツ・動きを中心に用意しているので、基本的な設計のデザインであれば
+            <span class="c-marker c-marker--thin">
+              簡単にサイトを再現できてしまう
+            </span>
+            はずです。
+          </div>
+          <!-- /e-lead -->
+
+          <div class="l-row l-row--padding">
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">Foundation</div>
+                <p class="e-excerpt">
+                  要素の初期化や
+                  <code>mixin</code>
+                  などのベースを設定。リセットCSSなどが該当します。
+                </p>
+                <div class="e-link">
+                  <a href="foundation/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">Layout</div>
+                <p class="e-excerpt">
+                  ヘッダーやフッターなど大枠のレイアウトに関する定義。装飾はなく枠だけを用意しているイメージ。
+                </p>
+                <div class="e-link">
+                  <a href="layout/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">Component</div>
+                <p class="e-excerpt">
+                  再利用ができる最小限のパーツ。21種類100パターンのパーツを用意しました。
+                </p>
+                <div class="e-link">
+                  <a href="component/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">Project</div>
+                <p class="e-excerpt">
+                  サイト固有のまとまりを定義してパターン化します。案件に応じて追加していくところです。
+                </p>
+                <div class="e-link">
+                  <a href="project/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">Utility</div>
+                <p class="e-excerpt">
+                  ちょっとした調整のために使われます。余白の調整や非表示など。
+                </p>
+                <div class="e-link">
+                  <a href="utility/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">Setting</div>
+                <p class="e-excerpt">
+                  色や幅、高さなど各種の値を設定するところ。
+                </p>
+                <div class="e-link">
+                  <a href="setting/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">External</div>
+                <p class="e-excerpt">
+                  外部リソースで読み込んだCSSを上書きするところ。
+                </p>
+                <div class="e-link">
+                  <a href="external/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">JavaScript</div>
+                <p class="e-excerpt">
+                  JavaScriptに連動して動きが決まっているパーツもあります。
+                </p>
+                <div class="e-link">
+                  <a href="javascript/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+            <div class="l-row__col l-row__col06 l-row__col03-tab">
+              <div class="p-flocss-item">
+                <div class="e-title">SVG</div>
+                <p class="e-excerpt">
+                  SVGのパターンを用意しました。主にセクション間の区切りで使うことを想定しています。
+                </p>
+                <div class="e-link">
+                  <a href="svg/index.html">詳しく見る</a>
+                </div>
+              </div>
+              <!-- /p-flocss-item -->
+            </div>
+            <!-- /l-row__col -->
+          </div>
+          <!-- /l-row -->
+        </div>
+        <!-- /l-inner -->
+      </section>
+      <!-- /p-flocss -->
+
+      <!-- p-demo -->
+      <section class="l-section p-demo">
+        <div class="l-inner">
+          <div class="c-section-head">
+            <h2 class="c-section-title">DEMOサイト</h2>
+            <div class="c-section-lead">DEMO</div>
+          </div>
+          <!-- /c-section-head -->
+        </div>
+        <!-- /l-inner -->
+      </section>
+      <!-- /l-section -->
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="p-copy">&copy;copyright</div>
+      </div>
+    </footer>
+
+    <div class="c-floating js-floating">
+      <a href="#" class="">
+        <div class="c-icon-arrow-top p-icon-arrow-top"><span></span></div>
+      </a>
+    </div>
+
+    <div class="c-loading">
+      <div class="c-loading__content">loading...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="src/lib/stickyfill/stickyfill.min-var=2.0.5.js"></script>
+    <script src="src/lib/intersection-observer/intersection-observer.js"></script>
+    <script src="src/lib/highlight/highlight.pack.js"></script>
+    <script src="src/js/script-var=1.0.0.js"></script>
+    <script src="src/js/my-var=1.0.0.js"></script>
+  </body>
+</html>

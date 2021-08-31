@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  // 特定の言語だけデフォルトのドキュメントのフォーマットを設定する場合
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // }
+  "dartsass.targetDirectory": "src/css"
+}

@@ -1,0 +1,30 @@
+@use "../global" as global;
+// @use "../foundation/extend";
+// @import的にsettingやfunctionで定義した変数を使いたい場合
+@use "loading";
+
+@use "mainvisual";
+@use "heading";
+@use "navigation";
+@use "drawer";
+@use "list";
+@use "section";
+@use "floating";
+@use "icon";
+@use "marker";
+@use "background";
+@use "box";
+@use "card";
+@use "breadcrumb";
+@use "button";
+@use "ellipsis";
+@use "modal";
+@use "tab";
+@use "table";
+@use "textarea";
+@use "radio";
+@use "select";
+@use "file";
+@use "accordion";
+@use "pagenation";
+// 変数を祖先のファイルまで使わせる予定がないであろうcomponentとかprojectとかは、@useでまとめていいと思います。

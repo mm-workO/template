@@ -1,0 +1,34 @@
+@use "../global" as global;
+
+.c-file {
+}
+
+.c-file__label {
+  padding: 0.4em 0.8em;
+  border: 1px solid global.$form-border-color;
+  cursor: pointer;
+  background: #fff;
+  color: global.$color-text;
+  font-weight: global.$font-weight-base;
+  font-size: global.$font-size-base;
+}
+
+.c-file__input {
+  display: none;
+}
+
+.c-file__result {
+  display: none;
+  width: 100%;
+  padding: 0.4em 0;
+  border-radius: 0;
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 0.95em;
+  color: inherit;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
