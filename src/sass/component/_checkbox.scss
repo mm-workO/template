@@ -1,4 +1,5 @@
-.c-checkbox {
+@use "../foundation/extend";
 
-	@extend %checkbox;
+.c-checkbox {
+  @extend %checkbox;
 }

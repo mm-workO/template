@@ -1,8 +1,7 @@
-@use "../global" as global;
+// @use "../global" as global;
 // @use "../foundation/extend";
 // @import的にsettingやfunctionで定義した変数を使いたい場合
 @use "loading";
-
 @use "mainvisual";
 @use "heading";
 @use "navigation";
@@ -27,4 +26,6 @@
 @use "file";
 @use "accordion";
 @use "pagenation";
+
+@use "checkbox";
 // 変数を祖先のファイルまで使わせる予定がないであろうcomponentとかprojectとかは、@useでまとめていいと思います。
